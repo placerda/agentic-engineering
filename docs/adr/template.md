@@ -1,57 +1,57 @@
-# ADR-NNN: [decisão em frase curta]
+# ADR-NNN: [decision in a short sentence]
 
-**Estado:** Proposto  
-**Data:** AAAA-MM-DD  
-**Responsáveis:** [nomes ou equipe]
+**Status:** Proposed<br>
+**Date:** YYYY-MM-DD<br>
+**Owners:** [names or team]
 
-## Contexto
+## Context
 
-[Problema, restrições, forças e características arquiteturais priorizadas.]
+[Problem, constraints, forces, and prioritized architectural
+characteristics.]
 
-## Alternativas consideradas
+## Alternatives considered
 
-### Opção A: [nome]
+### Option A: [name]
 
-- Benefícios:
-- Custos e riscos:
-- Consequências operacionais:
-- Reversibilidade:
+- Benefits:
+- Costs and risks:
+- Operational consequences:
+- Reversibility:
 
-### Opção B: [nome]
+### Option B: [name]
 
-- Benefícios:
-- Custos e riscos:
-- Consequências operacionais:
-- Reversibilidade:
+- Benefits:
+- Costs and risks:
+- Operational consequences:
+- Reversibility:
 
-### Não mudar
+### Do not change
 
-- Benefícios:
-- Custos e riscos:
+- Benefits:
+- Costs and risks:
 
-## Decisão
+## Decision
 
-[Escolha e justificativa baseada no contexto.]
+[Choice and justification based on the context.]
 
-## Consequências
+## Consequences
 
-### Positivas
+### Positive
 
-- [consequência]
+- [consequence]
 
-### Negativas ou aceitas
+### Negative or accepted
 
-- [consequência]
+- [consequence]
 
-## Adoção e migração
+## Adoption and migration
 
-[Etapas, compatibilidade, rollback ou roll-forward.]
+[Steps, compatibility, rollback, or roll-forward.]
 
-## Verificação de conformidade
+## Compliance verification
 
-[Fitness functions, testes, políticas, métricas ou revisão.]
+[Fitness functions, tests, policies, metrics, or review.]
 
-## Gatilho de revisão
+## Review trigger
 
-[Evento, medida ou data que exige reavaliar.]
-
+[Event, measure, or date that requires reassessment.]

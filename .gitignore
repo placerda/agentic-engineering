@@ -1,4 +1,4 @@
-# Sistemas operacionais e editores
+# Operating systems and editors
 .DS_Store
 Thumbs.db
 *.swp
@@ -6,7 +6,7 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Segredos e configuração local
+# Secrets and local configuration
 .env
 .env.*
 !.env.example
@@ -29,7 +29,7 @@ build/
 node_modules/
 coverage/
 
-# Arquivos temporários
+# Temporary files
 *.log
 *.tmp
 tmp/

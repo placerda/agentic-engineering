@@ -1,51 +1,51 @@
-# Especificação: [nome]
+# Specification: [name]
 
-**Estado:** Rascunho  
-**Responsável:** [nome ou equipe]  
+**Status:** Draft<br>
+**Owner:** [name or team]<br>
 **Issue:** [link]
 
-## Problema e resultado
+## Problem and outcome
 
-[Quem é afetado, qual problema existe e qual resultado observável é esperado.]
+[Who is affected, what problem exists, and what observable outcome is
+expected.]
 
-## Escopo
+## Scope
 
-### Incluído
-
-- [item]
-
-### Fora de escopo
+### Included
 
 - [item]
 
-## Jornadas e critérios de aceite
+### Out of scope
 
-### Jornada 1: [nome]
+- [item]
 
-**Dado** [contexto]  
-**Quando** [ação]  
-**Então** [resultado verificável]
+## Journeys and acceptance criteria
 
-## Contratos e dados
+### Journey 1: [name]
 
-[APIs, eventos, esquemas, compatibilidade, retenção e ownership. Use "N/A" se
-não houver.]
+**Given** [context]<br>
+**When** [action]<br>
+**Then** [verifiable outcome]
 
-## Segurança e privacidade
+## Contracts and data
 
-[Limites de confiança, autorização, segredos, dados sensíveis e abuso.]
+[APIs, events, schemas, compatibility, retention, and ownership. Use "N/A"
+if none.]
 
-## Características arquiteturais
+## Security and privacy
 
-| Característica | Cenário e medida | Prioridade |
+[Trust boundaries, authorization, secrets, sensitive data, and abuse.]
+
+## Architectural characteristics
+
+| Characteristic | Scenario and measure | Priority |
 | --- | --- | --- |
-| [nome] | [estímulo, ambiente, resposta e limite] | [alta/média/baixa] |
+| [name] | [stimulus, environment, response, and limit] | [high/medium/low] |
 
-## Falhas e recuperação
+## Failures and recovery
 
-[Falhas parciais, idempotência, rollback ou roll-forward.]
+[Partial failures, idempotency, rollback, or roll-forward.]
 
-## Questões abertas
+## Open questions
 
-- [pergunta, responsável e prazo]
-
+- [question, owner, and deadline]

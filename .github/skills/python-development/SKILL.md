@@ -1,18 +1,20 @@
 ---
 name: python-development
-description: Orienta implementação e revisão Python alinhadas a PEP 8, PEP 20, PEP 257 e às ferramentas do repositório. Use ao alterar arquivos Python.
+description: Guides Python implementation and review aligned with PEP 8, PEP 20, PEP 257, and the repository's tools. Use when changing Python files.
 ---
 
-# Desenvolvimento Python
+# Python development
 
-Leia `../engineering-principles/references/python-pep-guidance.md`. Depois:
+Read `../engineering-principles/references/python-pep-guidance.md`. Then:
 
-1. Descubra versão do Python, gerenciador, `pyproject.toml` e comandos reais.
-2. Preserve tipos, API pública e comportamento.
-3. Aplique docstrings onde o contrato público precisa delas.
-4. Isole efeitos externos e cubra regras com testes determinísticos.
-5. Execute linter, formatador, tipos e testes já configurados.
+1. Discover the Python version, package manager, `pyproject.toml`, and real
+   commands.
+2. Preserve types, the public API, and behavior.
+3. Apply docstrings where the public contract needs them.
+4. Isolate external effects and cover rules with deterministic tests.
+5. Run the linter, formatter, type checker, and tests already configured.
 
-Não imponha um limite de linha ou ferramenta diferente da configuração do
-projeto. Não use `Any`, cast ou captura ampla para contornar um erro de projeto.
+Do not impose a line limit or tool different from the project's
+configuration. Do not use `Any`, casts, or broad exception handling to work
+around a design error.
 

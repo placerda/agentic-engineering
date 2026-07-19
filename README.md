@@ -1,76 +1,69 @@
 # Agentic Engineering
 
-Modelo reutilizável para orientar agentes de engenharia de software no GitHub e
-no GitHub Copilot sem transformar cada solicitação em um manual extenso.
+A reusable model for guiding software engineering agents on GitHub and
+GitHub Copilot without turning every request into a lengthy manual.
 
-O repositório usa divulgação progressiva:
+The repository uses progressive disclosure:
 
-1. Um núcleo curto é aplicado a todo trabalho.
-2. Instruções específicas entram apenas para arquivos compatíveis.
-3. Agentes funcionais assumem papéis com ferramentas mínimas.
-4. Skills carregam procedimentos e referências somente quando relevantes.
-5. Documentação em `docs/` serve a pessoas e pode ser aberta quando uma skill ou
-   instrução a indicar. Ela não é contexto automático.
+1. A short core applies to all work.
+2. Specific instructions load only for matching files.
+3. Functional agents take on roles with minimal tools.
+4. Skills load procedures and references only when relevant.
+5. Documentation in `docs/` serves people and can be opened when a skill or
+   instruction points to it. It is not automatic context.
 
-Spec Kit, em `.specify/`, é acionado por uma regra objetiva para mudanças de
-alto risco. Ele é um fluxo de trabalho, não uma camada de contexto.
+Spec Kit, in `.specify/`, is triggered by an objective rule for high-risk
+changes. It is a workflow, not a context layer.
 
-## Início rápido
+## Quick start
 
-1. Leia [`AGENTS.md`](AGENTS.md) para conhecer o contrato operacional.
-2. Escolha o agente pela tabela em [`docs/routing.md`](docs/routing.md).
-3. Para uma mudança simples, trabalhe a partir de uma issue com critérios de
-   aceite.
-4. Para uma mudança ampla ou de alto risco, siga
+1. Read [`AGENTS.md`](AGENTS.md) to learn the operating contract.
+2. Choose the agent from the table in [`docs/routing.md`](docs/routing.md).
+3. For a simple change, work from an issue with acceptance criteria.
+4. For a broad or high-risk change, follow
    [`.specify/README.md`](.specify/README.md).
-5. Antes de concluir, produza evidência reproduzível de que o comportamento
-   esperado funciona.
+5. Before concluding, produce reproducible evidence that the expected
+   behavior works.
 
-## Mapa do repositório
+## Repository map
 
-| Caminho | Finalidade |
+| Path | Purpose |
 | --- | --- |
-| `.github/copilot-instructions.md` | Núcleo conciso, sempre ativo |
-| `.github/instructions/` | Regras ativadas por caminho |
-| `.github/agents/` | Agentes funcionais e limites de atuação |
-| `.github/skills/` | Índices e procedimentos carregados sob demanda |
-| `.specify/` | Constituição e fluxo mínimo de especificação |
-| `docs/` | Guia completo, adoção e roteamento |
-| `docs/adr/` | Decisões arquiteturais do projeto consumidor |
+| `.github/copilot-instructions.md` | Concise, always-on core |
+| `.github/instructions/` | Path-activated rules |
+| `.github/agents/` | Functional agents and their boundaries |
+| `.github/skills/` | Indexes and procedures loaded on demand |
+| `.specify/` | Constitution and minimal specification flow |
+| `docs/` | Full guide, adoption, and routing |
+| `docs/adr/` | Architectural decisions of the consuming project |
 
-## Adotar em outro repositório
+## Adopting this in another repository
 
-Não copie tudo sem análise. Comece pelo núcleo, substitua comandos e caminhos
-pelos que foram executados com sucesso no projeto, remova agentes sem uso e
-ative somente as instruções compatíveis com a tecnologia presente. O roteiro
-completo está em [`docs/adoption-guide.md`](docs/adoption-guide.md).
+Do not copy everything without analysis. Start with the core, replace commands
+and paths with ones that have been successfully run in the project, remove
+unused agents, and enable only the instructions compatible with the present
+technology. The full roadmap is in
+[`docs/adoption-guide.md`](docs/adoption-guide.md).
 
-## Descoberta automática e referências comuns
+## Automatic discovery and common references
 
-O GitHub Copilot reconhece arquivos em locais e formatos específicos. Arquivos
-como `.github/copilot-instructions.md`, `AGENTS.md`, perfis em
-`.github/agents/`, instruções `*.instructions.md` e skills com `SKILL.md`
-podem ser descobertos por superfícies compatíveis. Um Markdown comum em `docs/`
-não é carregado automaticamente apenas por existir. Ele precisa ser anexado,
-referenciado por uma instrução compatível ou aberto quando uma skill orientar
-seu uso.
+GitHub Copilot recognizes files in specific locations and formats. Files such
+as `.github/copilot-instructions.md`, `AGENTS.md`, profiles in
+`.github/agents/`, `*.instructions.md` instructions, and skills with
+`SKILL.md` can be discovered by compatible surfaces. A plain Markdown file in
+`docs/` is not automatically loaded just by existing. It needs to be
+attached, referenced by a compatible instruction, or opened when a skill
+directs its use.
 
-O suporte varia entre GitHub.com, Copilot CLI e IDEs. Consulte
-[`docs/agentic-development-model.md`](docs/agentic-development-model.md#compatibilidade-entre-superficies)
-antes de depender de um recurso específico.
+Support varies across GitHub.com, Copilot CLI, and IDEs. Check
+[`docs/agentic-development-model.md`](docs/agentic-development-model.md#cross-surface-compatibility)
+before relying on a specific feature.
 
-## Direitos autorais e método de síntese
+## Sources and licensing
 
-Os princípios deste modelo são formulações originais e concisas. Duas obras
-locais autorizadas pelo usuário foram consultadas somente para síntese:
-*Clean Architecture*, de Robert C. Martin, e *Fundamentals of Software
-Architecture*, de Mark Richards e Neal Ford. Nenhuma passagem, figura, tabela,
-exemplo ou estrutura de capítulo foi reproduzida.
-
-As práticas de Clean Code aqui mencionadas são um resumo geral de práticas
-amplamente conhecidas. Elas não foram extraídas nem citadas do livro
-*Clean Code*. As fontes oficiais e referências bibliográficas estão em
+The model draws on established software architecture, implementation, Python,
+cloud-native, and agentic engineering guidance. The complete bibliography is in
 [`sources.md`](.github/skills/engineering-principles/references/sources.md).
 
-Este repositório não declara uma licença. Defina uma licença adequada antes de
-redistribuir o modelo.
+This repository does not declare a license. Define an appropriate license
+before redistributing the model.

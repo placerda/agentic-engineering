@@ -1,40 +1,42 @@
-# Serviços cloud-native e Twelve-Factor
+# Cloud-native services and Twelve-Factor
 
-Use estas orientações em aplicações implantáveis e serviços. Não as imponha a
-toda biblioteca, ferramenta local ou script.
+Use this guidance for deployable applications and services. Do not impose
+it on every library, local tool, or script.
 
-## Doze fatores contextualizados
+## The twelve factors, contextualized
 
-1. **Codebase:** uma base versionada por aplicação, com várias implantações.
-2. **Dependências:** declare e isole dependências; não dependa do estado
-   implícito da máquina.
-3. **Configuração:** separe configuração por ambiente do código. Segredos ficam
-   em mecanismo seguro, nunca no repositório.
-4. **Serviços de apoio:** trate banco, fila, cache e APIs como recursos anexados
-   e substituíveis por configuração.
-5. **Build, release, run:** produza artefato imutável, combine-o com configuração
-   em uma release identificável e execute sem reconstruir.
-6. **Processos:** prefira processos sem estado e compartilhe estado por serviço
-   apropriado.
-7. **Port binding:** quando aplicável, o serviço exporta sua interface por uma
-   porta e não depende de servidor externo acoplado.
-8. **Concorrência:** escale por tipos e quantidades de processos, com trabalho
-   particionável.
-9. **Disposability:** inicialize e encerre rápido; trate interrupção, reentrega e
-   recuperação.
-10. **Paridade:** reduza diferenças de dependência, serviço e processo entre
-    desenvolvimento e produção.
-11. **Logs:** escreva eventos estruturados; roteamento, retenção e consulta são
-    responsabilidades do ambiente.
-12. **Administração:** execute migrações e tarefas pontuais com a mesma versão,
-    configuração, controles e auditoria da aplicação.
+1. **Codebase:** one codebase tracked in revision control, many deploys.
+2. **Dependencies:** declare and isolate dependencies; do not rely on
+   implicit machine state.
+3. **Config:** keep per-environment configuration separate from code.
+   Secrets live in a secure mechanism, never in the repository.
+4. **Backing services:** treat databases, queues, caches, and APIs as
+   attached resources, replaceable through configuration.
+5. **Build, release, run:** produce an immutable artifact, combine it with
+   configuration into an identifiable release, and run it without
+   rebuilding.
+6. **Processes:** prefer stateless processes and share state through the
+   appropriate service.
+7. **Port binding:** when applicable, the service exports its interface
+   through a port and does not depend on an externally injected server.
+8. **Concurrency:** scale out by process types and counts, with
+   partitionable work.
+9. **Disposability:** start up and shut down fast; handle interruption,
+   redelivery, and recovery.
+10. **Dev/prod parity:** reduce differences in dependencies, services, and
+    processes between development and production.
+11. **Logs:** write structured events; routing, retention, and querying are
+    the environment's responsibility.
+12. **Admin processes:** run migrations and one-off tasks with the same
+    version, configuration, controls, and audit trail as the application.
 
-## Complementos atuais
+## Current complements
 
-- Defina health checks que representem capacidade real de servir.
-- Use privilégio mínimo, imagens pequenas, dependências verificadas e identidade
-  de workload.
-- Projete observabilidade para logs, métricas e traces correlacionados.
-- Declare limites, pedidos de recurso, timeouts e comportamento de escala.
-- Valide rollback ou roll-forward, migração e compatibilidade entre versões.
+- Define health checks that represent real capacity to serve traffic.
+- Use least privilege, small images, verified dependencies, and workload
+  identity.
+- Design observability for correlated logs, metrics, and traces.
+- Declare limits, resource requests, timeouts, and scaling behavior.
+- Validate rollback or roll-forward, migration, and cross-version
+  compatibility.
 

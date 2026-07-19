@@ -1,128 +1,129 @@
-# Guia de adoção
+# Adoption guide
 
-Este modelo é um ponto de partida. Adote somente regras que possam ser
-explicadas, mantidas e verificadas no repositório de destino.
+This model is a starting point. Adopt only rules that can be explained,
+maintained, and verified in the target repository.
 
-## 1. Faça um inventário
+## 1. Take inventory
 
-Registre:
+Record:
 
-- propósito, usuários e capacidades do produto;
-- linguagens, frameworks e runtimes;
-- comandos reais de bootstrap, build, teste, lint e execução;
-- estrutura de módulos e ownership;
-- interfaces públicas, dados persistidos e unidades de implantação;
-- CI, políticas de segurança e processo de release;
-- documentação canônica e canais operacionais.
+- purpose, users, and product capabilities;
+- languages, frameworks, and runtimes;
+- real bootstrap, build, test, lint, and run commands;
+- module structure and ownership;
+- public interfaces, persisted data, and deployment units;
+- CI, security policies, and release process;
+- canonical documentation and operational channels.
 
-Execute os comandos antes de documentá-los. Não copie exemplos deste modelo como
-se fossem comandos do projeto.
+Run the commands before documenting them. Do not copy examples from this
+model as if they were the project's commands.
 
-## 2. Adote o núcleo
+## 2. Adopt the core
 
-Copie `AGENTS.md` e `.github/copilot-instructions.md`. Em seguida:
+Copy `AGENTS.md` and `.github/copilot-instructions.md`. Then:
 
-1. Substitua linguagem genérica por fatos estáveis do repositório.
-2. Mantenha o arquivo sempre ativo curto.
-3. Remova qualquer regra que contradiga a automação existente.
-4. Acrescente os comandos validados e os caminhos mais importantes.
-5. Não inclua segredos, URLs privadas com tokens ou dados pessoais.
+1. Replace generic language with stable facts from the repository.
+2. Keep the always-on file short.
+3. Remove any rule that contradicts existing automation.
+4. Add the validated commands and the most important paths.
+5. Do not include secrets, private URLs with tokens, or personal data.
 
-## 3. Ative escopo real
+## 3. Enable real scope
 
-Copie `python.instructions.md` apenas se houver Python. Confirme se o glob
-`**/*.py,**/*.pyi` cobre o projeto.
+Copy `python.instructions.md` only if there is Python. Confirm the
+`**/*.py,**/*.pyi` glob covers the project.
 
-Copie `cloud-native.instructions.md` somente se o repositório contiver serviços
-implantáveis ou infraestrutura. Ajuste `applyTo` aos diretórios reais. Não use
-`**/*.yaml` de forma ampla, pois isso aplicaria regras cloud-native a arquivos
-sem relação com implantação.
+Copy `cloud-native.instructions.md` only if the repository contains
+deployable services or infrastructure. Adjust `applyTo` to the real
+directories. Do not use a broad `**/*.yaml`, as that would apply
+cloud-native rules to files unrelated to deployment.
 
-Crie novas instruções com escopo somente quando:
+Create new scoped instructions only when:
 
-- a regra se aplica a um conjunto identificável de arquivos;
-- o glob é específico;
-- a regra será usada com frequência;
-- não existe uma configuração executável equivalente.
+- the rule applies to an identifiable set of files;
+- the glob is specific;
+- the rule will be used frequently;
+- there is no equivalent executable configuration.
 
-## 4. Escolha agentes
+## 4. Choose agents
 
-Comece com `implementation` e, se necessário, `architecture`. Adicione outros
-perfis quando houver demanda recorrente e uma saída diferente.
+Start with `implementation` and, if needed, `architecture`. Add other
+profiles when there is recurring demand and a distinct output.
 
-Para cada perfil:
+For each profile:
 
-- mantenha nome funcional;
-- escreva na descrição quando usar e quando não usar;
-- conceda os menores aliases de ferramentas necessários;
-- não configure MCPs ou segredos sem revisão de segurança;
-- defina entrada, saída e handoff.
+- keep a functional name;
+- write when to use it and when not to in the description;
+- grant the smallest set of tool aliases needed;
+- do not configure MCPs or secrets without a security review;
+- define input, output, and handoff.
 
-Muitos agentes aumentam roteamento, duplicação e manutenção. Poucos agentes
-amplos aumentam contexto e mistura de responsabilidades. Adicione um agente
-quando a especialização possui critérios, ferramentas ou artefatos próprios.
+Many agents increase routing, duplication, and maintenance. Few broad
+agents increase context and mixed responsibilities. Add an agent when the
+specialization has its own criteria, tools, or artifacts.
 
-## 5. Escolha skills
+## 5. Choose skills
 
-Copie `engineering-principles` como biblioteca canônica. Remova referências sem
-aplicação. Skills focadas devem apontar para a regra canônica, não duplicá-la.
+Copy `engineering-principles` as the canonical library. Remove references
+that do not apply. Focused skills should point to the canonical rule, not
+duplicate it.
 
-Revise qualquer skill externa antes de instalar. Skills podem conter scripts e
-instruções maliciosas. Não pré-aprove shell em `allowed-tools` sem confiança e
-necessidade.
+Review any external skill before installing it. Skills can contain
+malicious scripts and instructions. Do not pre-approve shell in
+`allowed-tools` without trust and need.
 
-## 6. Configure issue e especificação
+## 6. Configure issue and specification templates
 
-Adapte os templates de issue ao processo real. Aplique a regra de Spec Kit da
-constituição:
+Adapt the issue templates to the real process. Apply the Spec Kit rule from
+the constitution:
 
-- issue direta para mudança local e reversível;
-- especificação para alto risco ou múltiplas condições estruturais.
+- a direct issue for a local, reversible change;
+- a specification for high risk or multiple structural conditions.
 
-Evite exigir especificação extensa para correções simples. Evite também usar uma
-issue vaga para migração de dados, mudança de segurança ou contrato
-incompatível.
+Avoid requiring an extensive specification for simple fixes. Also avoid
+using a vague issue for data migration, security change, or an
+incompatible contract.
 
-## 7. Integre qualidade
+## 7. Integrate quality
 
-Este repositório não fornece workflow executável porque não conhece a stack de
-destino. No projeto consumidor, conecte fitness functions aos mecanismos já
-adotados:
+This repository does not provide an executable workflow because it does
+not know the target stack. In the consuming project, connect fitness
+functions to the mechanisms already adopted:
 
-- formatter, linter e tipos;
-- testes unitários, de contrato, integração e jornada;
-- análise de dependências e ciclos;
-- segurança de código, dependências e segredos;
-- validação de schema e infraestrutura;
-- métricas e políticas de implantação.
+- formatter, linter, and type checker;
+- unit, contract, integration, and journey tests;
+- dependency and cycle analysis;
+- code, dependency, and secret security;
+- schema and infrastructure validation;
+- metrics and deployment policies.
 
-Cada gate precisa ter dono, tempo aceitável, mensagem acionável e processo para
-exceção.
+Each gate needs an owner, acceptable time, actionable message, and an
+exception process.
 
-## 8. Faça um piloto
+## 8. Run a pilot
 
-Escolha uma mudança real de baixo risco e observe:
+Choose a real, low-risk change and observe:
 
-- instruções descobertas corretamente;
-- arquivos irrelevantes carregados;
-- perguntas repetidas;
-- ferramenta ou permissão ausente;
-- qualidade dos handoffs;
-- tempo até primeira mudança válida;
-- retrabalho após revisão;
-- evidência produzida.
+- instructions discovered correctly;
+- irrelevant files loaded;
+- repeated questions;
+- missing tool or permission;
+- handoff quality;
+- time to first valid change;
+- rework after review;
+- evidence produced.
 
-Ajuste o modelo a partir desses sinais, não do volume de arquivos.
+Adjust the model based on these signals, not on the volume of files.
 
 ## Checklist
 
-- [ ] Núcleo contém fatos estáveis e comandos verificados.
-- [ ] Instruções com escopo têm globs específicos.
-- [ ] Cada agente tem uso, não uso, ferramentas e saída.
-- [ ] Skills têm uma fonte canônica por regra.
-- [ ] Regra de Spec Kit foi adaptada ao risco do produto.
-- [ ] Templates refletem o processo da equipe.
-- [ ] CI executa regras objetivas importantes.
-- [ ] Links, nomes e caminhos foram verificados.
-- [ ] Proprietário e revisão periódica foram definidos.
+- [ ] The core contains stable facts and verified commands.
+- [ ] Scoped instructions have specific globs.
+- [ ] Each agent has a use case, non-use case, tools, and output.
+- [ ] Skills have one canonical source per rule.
+- [ ] The Spec Kit rule was adapted to the product's risk.
+- [ ] Templates reflect the team's process.
+- [ ] CI runs important objective rules.
+- [ ] Links, names, and paths have been verified.
+- [ ] An owner and periodic review have been defined.
 

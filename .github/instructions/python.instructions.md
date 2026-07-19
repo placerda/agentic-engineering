@@ -4,23 +4,25 @@ applyTo: "**/*.py,**/*.pyi"
 
 # Python
 
-- A configuração executável do repositório é a fonte de verdade. Respeite
-  `pyproject.toml`, Ruff, o formatador, o verificador de tipos e os testes já
-  adotados. Não substitua escolhas locais por preferências genéricas.
-- Siga PEP 8 para legibilidade, nomes, imports, espaçamento e organização, salvo
-  quando a configuração do projeto definir uma convenção compatível diferente.
-- Aplique PEP 20 como critério de decisão: seja explícito, simples e legível;
-  não esconda erros; diante de ambiguidade relevante, recuse-se a adivinhar.
-- Siga PEP 257 em módulos, classes, funções e métodos públicos. Docstrings devem
-  explicar comportamento, contrato, argumentos, retorno, efeitos colaterais,
-  exceções e restrições quando essas informações forem úteis. Não repita a
-  assinatura nem descreva o óbvio.
-- Prefira tipos precisos, estruturas pequenas e interfaces explícitas. Evite
-  `Any`, casts e exceções amplas sem justificativa.
-- Isole relógio, aleatoriedade, sistema de arquivos, rede e provedores para que a
-  lógica de negócio seja testável de forma determinística.
-- Execute Ruff, formatador, verificação de tipos e testes conforme os comandos do
-  repositório. Não introduza ferramentas novas apenas para satisfazer esta regra.
+- The repository's executable configuration is the source of truth. Respect
+  `pyproject.toml`, Ruff, the formatter, the type checker, and the tests
+  already adopted. Do not replace local choices with generic preferences.
+- Follow PEP 8 for readability, naming, imports, spacing, and organization,
+  unless the project's configuration defines a different compatible
+  convention.
+- Apply PEP 20 as a decision criterion: be explicit, simple, and readable;
+  do not hide errors; when facing meaningful ambiguity, refuse to guess.
+- Follow PEP 257 for public modules, classes, functions, and methods.
+  Docstrings must explain behavior, contract, arguments, return value, side
+  effects, exceptions, and constraints when that information is useful. Do
+  not repeat the signature or describe the obvious.
+- Prefer precise types, small structures, and explicit interfaces. Avoid
+  `Any`, casts, and broad exceptions without justification.
+- Isolate clock, randomness, filesystem, network, and providers so business
+  logic is deterministically testable.
+- Run Ruff, the formatter, type checking, and tests according to the
+  repository's commands. Do not introduce new tools just to satisfy this
+  rule.
 
-Para orientação detalhada, carregue a skill `python-development`.
+For detailed guidance, load the `python-development` skill.
 

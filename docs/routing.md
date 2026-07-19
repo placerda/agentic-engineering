@@ -1,77 +1,77 @@
-# Roteamento e contratos de handoff
+# Routing and handoff contracts
 
-Escolha o menor número de agentes capaz de concluir a tarefa. Um único agente é
-preferível quando não há benefício real de especialização ou isolamento de
-contexto.
+Choose the smallest number of agents capable of completing the task. A
+single agent is preferable when there is no real benefit from
+specialization or context isolation.
 
-## Tarefa para agente
+## Task to agent
 
-| Tarefa | Agente principal | Não usar quando |
+| Task | Primary agent | Do not use when |
 | --- | --- | --- |
-| Coordenar várias disciplinas e dependências | `engineering-orchestrator` | Uma edição local tem caminho claro |
-| Implementar, testar e ajustar código | `implementation` | Requisitos ou decisões estruturais estão abertos |
-| Classificar e preparar backlog | `issue-triage` | A tarefa já está pronta para implementação |
-| Decidir fronteiras, contratos ou trade-offs | `architecture` | Não existe decisão arquitetural relevante |
-| Explicar uso, configuração e operação | `documentation-ux` | O comportamento ainda não foi confirmado |
-| Diagnosticar falha e orientar recuperação | `technical-support` | A ação seria destrutiva ou de produto |
-| Preparar mensagem profissional | `workplace-communications` | Acesso ou envio não foi autorizado |
+| Coordinate multiple disciplines and dependencies | `engineering-orchestrator` | A local edit has a clear path |
+| Implement, test, and adjust code | `implementation` | Requirements or structural decisions are still open |
+| Classify and prepare the backlog | `issue-triage` | The task is already ready for implementation |
+| Decide boundaries, contracts, or trade-offs | `architecture` | There is no relevant architectural decision |
+| Explain usage, configuration, and operation | `documentation-ux` | The behavior has not yet been confirmed |
+| Diagnose a failure and guide recovery | `technical-support` | The action would be destructive or a product decision |
+| Prepare a professional message | `workplace-communications` | Access or sending has not been authorized |
 
-## Contrato mínimo de handoff
+## Minimal handoff contract
 
-Todo handoff contém:
+Every handoff contains:
 
-- objetivo e público afetado;
-- fonte de verdade para requisitos;
-- artefatos e caminhos relevantes;
-- decisões tomadas e alternativas rejeitadas;
-- escopo incluído e excluído;
-- riscos, incertezas e permissões;
-- condição de saída e evidência esperada.
+- objective and affected audience;
+- source of truth for requirements;
+- relevant artifacts and paths;
+- decisions made and alternatives rejected;
+- scope included and excluded;
+- risks, uncertainties, and permissions;
+- exit condition and expected evidence.
 
-O agente receptor confirma o que recebeu e não reabre decisões sem nova
-evidência.
+The receiving agent confirms what it received and does not reopen decisions
+without new evidence.
 
-## Fluxos comuns
+## Common flows
 
-### Mudança simples
+### Simple change
 
 ```mermaid
 flowchart LR
-  Issue[Issue pronta] --> Implementation[implementation]
-  Implementation --> Evidence[Testes e documentação]
-  Evidence --> Review[Revisão]
+  Issue[Ready issue] --> Implementation[implementation]
+  Implementation --> Evidence[Tests and documentation]
+  Evidence --> Review[Review]
 ```
 
-### Mudança estrutural
+### Structural change
 
 ```mermaid
 flowchart LR
   Triage[issue-triage] --> Architecture[architecture]
-  Architecture --> ADR[ADR e fitness functions]
+  Architecture --> ADR[ADR and fitness functions]
   ADR --> Implementation[implementation]
   Implementation --> Docs[documentation-ux]
-  Docs --> Evidence[Evidência final]
+  Docs --> Evidence[Final evidence]
 ```
 
-### Falha reportada
+### Reported failure
 
 ```mermaid
 flowchart LR
-  Report[Sintoma] --> Support[technical-support]
-  Support -->|contorno| Recovery[Recuperação]
-  Support -->|defeito| Triage[issue-triage]
+  Report[Symptom] --> Support[technical-support]
+  Support -->|workaround| Recovery[Recovery]
+  Support -->|defect| Triage[issue-triage]
   Triage --> Implementation[implementation]
 ```
 
-## Limites das superfícies
+## Surface limitations
 
-Os perfis usam apenas aliases oficiais de ferramentas no frontmatter. Handoffs
-são contratos no corpo dos perfis e neste documento. O campo de frontmatter
-`handoffs` pode existir em algumas IDEs, mas é ignorado pelo Copilot cloud agent
-no GitHub.com. Não dependa dele para completar o fluxo.
+Profiles use only official tool aliases in the frontmatter. Handoffs are
+contracts in the body of the profiles and in this document. The `handoffs`
+frontmatter field may exist in some IDEs, but it is ignored by the Copilot
+cloud agent on GitHub.com. Do not rely on it to complete the flow.
 
-Ferramentas externas, como email, calendário, chat, nuvem ou observabilidade,
-dependem de MCPs ou integrações autorizadas. Um nome de agente não concede
-acesso. Se a ferramenta não estiver disponível, o agente deve produzir um
-rascunho ou instrução verificável, nunca alegar que executou a ação.
+External tools, such as email, calendar, chat, cloud, or observability,
+depend on authorized MCPs or integrations. An agent name does not grant
+access. If the tool is not available, the agent must produce a draft or a
+verifiable instruction, never claim it performed the action.
 

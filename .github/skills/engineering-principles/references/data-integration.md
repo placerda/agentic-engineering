@@ -1,39 +1,41 @@
-# Dados e integração
+# Data and integration
 
-## Dados
+## Data
 
-- Ownership de dados acompanha a capacidade responsável por sua semântica.
-- Integração por banco compartilhado reduz autonomia e cria contratos ocultos.
-- Escolha topologia de dados junto com os limites e a operação, não depois.
-- Mudanças de esquema precisam de compatibilidade, migração, observação e
-  recuperação.
-- Minimize cópias, mas aceite duplicação controlada quando ela reduz acoplamento
-  e possui regra clara de consistência.
+- Data ownership follows the capability responsible for its semantics.
+- Integration through a shared database reduces autonomy and creates
+  hidden contracts.
+- Choose data topology together with boundaries and operation, not
+  afterward.
+- Schema changes need compatibility, migration, observation, and
+  recovery.
+- Minimize copies, but accept controlled duplication when it reduces
+  coupling and has a clear consistency rule.
 
-## Comunicação
+## Communication
 
-- Chamadas síncronas são simples de raciocinar localmente, mas acoplam
-  disponibilidade, latência e capacidade.
-- Mensagens assíncronas desacoplam tempo e podem melhorar resiliência, mas
-  exigem idempotência, ordenação quando necessária, tratamento de duplicatas,
-  rastreamento e operação.
-- Defina tempo limite, repetição, backoff, circuit breaker e orçamento de
-  latência no nível apropriado. Repetições sem limite amplificam falhas.
-- Contratos devem ter semântica de erro e evolução compatível.
+- Synchronous calls are simple to reason about locally, but couple
+  availability, latency, and capacity.
+- Asynchronous messages decouple time and can improve resilience, but
+  require idempotency, ordering when needed, duplicate handling,
+  tracing, and operation.
+- Define timeout, retry, backoff, circuit breaker, and latency budget at
+  the appropriate level. Unbounded retries amplify failures.
+- Contracts must have error semantics and compatible evolution.
 
-## Orquestração e coreografia
+## Orchestration and choreography
 
-- Use orquestração quando um fluxo precisa de coordenação explícita, estado
-  visível, compensação central ou auditoria de etapas.
-- Use coreografia quando participantes podem reagir de forma independente e o
-  acoplamento a um coordenador seria mais caro.
-- Evite coreografia opaca com sequência de eventos implícita e difícil de
-  observar.
-- Para fluxos críticos, modele falhas parciais e compensações antes da
-  implementação.
+- Use orchestration when a flow needs explicit coordination, visible
+  state, central compensation, or step auditing.
+- Use choreography when participants can react independently and coupling
+  to a coordinator would be more expensive.
+- Avoid opaque choreography with an implicit, hard-to-observe event
+  sequence.
+- For critical flows, model partial failures and compensations before
+  implementation.
 
-## Evidência
+## Evidence
 
-Teste contratos, compatibilidade, idempotência, falhas parciais, recuperação e
-telemetria de correlação. Um diagrama feliz não prova operação segura.
+Test contracts, compatibility, idempotency, partial failures, recovery, and
+correlation telemetry. A happy-path diagram does not prove safe operation.
 

@@ -1,41 +1,41 @@
-# Plano de implementação: [nome]
+# Implementation plan: [name]
 
-## Contexto técnico
+## Technical context
 
-[Estado atual, restrições, versões e configuração relevante.]
+[Current state, constraints, versions, and relevant configuration.]
 
-## Decisões e ADRs
+## Decisions and ADRs
 
-- [decisão ou link]
+- [decision or link]
 
-## Componentes e contratos afetados
+## Affected components and contracts
 
-| Área | Mudança | Compatibilidade |
+| Area | Change | Compatibility |
 | --- | --- | --- |
-| [área] | [mudança] | [estratégia] |
+| [area] | [change] | [strategy] |
 
-## Sequência de entrega
+## Delivery sequence
 
-1. [etapa pequena e verificável]
-2. [etapa]
+1. [small, verifiable step]
+2. [step]
 
-## Migração e recuperação
+## Migration and recovery
 
-[Coexistência entre versões, migração de dados, rollback ou roll-forward.]
+[Cross-version coexistence, data migration, rollback, or roll-forward.]
 
-## Validação
+## Validation
 
-| Critério | Evidência | Comando ou observação |
+| Criterion | Evidence | Command or observation |
 | --- | --- | --- |
-| [critério] | [resultado esperado] | [como verificar] |
+| [criterion] | [expected result] | [how to verify] |
 
-## Operação
+## Operation
 
-[Telemetria, alertas, runbook, capacidade e suporte.]
+[Telemetry, alerts, runbook, capacity, and support.]
 
-## Riscos
+## Risks
 
-| Risco | Mitigação | Sinal |
+| Risk | Mitigation | Signal |
 | --- | --- | --- |
-| [risco] | [ação] | [como detectar] |
+| [risk] | [action] | [how to detect] |
 

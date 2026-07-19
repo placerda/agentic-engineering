@@ -1,22 +1,11 @@
-# Fontes e bibliografia
+# Sources and bibliography
 
-Este modelo contém sínteses originais. As fontes são usadas para atribuição e
-aprofundamento, não como texto incorporado.
-
-## Livros consultados com autorização do usuário
+## Software architecture
 
 - Martin, Robert C. *Clean Architecture: A Craftsman's Guide to Software
   Structure and Design*. Pearson Education, 2017.
 - Richards, Mark; Ford, Neal. *Fundamentals of Software Architecture: An
-  Engineering Approach*. 2. ed. O'Reilly Media, 2025.
-
-Os arquivos locais foram lidos apenas para resumir princípios. Nenhuma passagem,
-figura, tabela, exemplo ou capítulo foi reproduzido.
-
-## Práticas gerais
-
-- As orientações de Clean Code são práticas gerais resumidas e amplamente
-  conhecidas. O livro *Clean Code* não foi fornecido nem consultado.
+  Engineering Approach*. 2nd ed. O'Reilly Media, 2025.
 
 ## Python
 
@@ -26,9 +15,9 @@ figura, tabela, exemplo ou capítulo foi reproduzido.
 - Goodger, David; Van Rossum, Guido. [PEP 257, Docstring
   Conventions](https://peps.python.org/pep-0257/).
 
-## Aplicações cloud-native
+## Cloud-native applications
 
-- [The Twelve-Factor App](https://12factor.net/) e suas páginas de fatores:
+- [The Twelve-Factor App](https://12factor.net/) and its factor pages:
   [codebase](https://12factor.net/codebase),
   [dependencies](https://12factor.net/dependencies),
   [config](https://12factor.net/config),
@@ -39,7 +28,7 @@ figura, tabela, exemplo ou capítulo foi reproduzido.
   [concurrency](https://12factor.net/concurrency),
   [disposability](https://12factor.net/disposability),
   [dev/prod parity](https://12factor.net/dev-prod-parity),
-  [logs](https://12factor.net/logs) e
+  [logs](https://12factor.net/logs), and
   [admin processes](https://12factor.net/admin-processes).
 
 ## GitHub Copilot
@@ -56,4 +45,3 @@ figura, tabela, exemplo ou capítulo foi reproduzido.
   skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills).
 - GitHub Docs. [Adding agent skills for GitHub
   Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills).
-

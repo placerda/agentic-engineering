@@ -1,40 +1,42 @@
-# Componentes e fronteiras
+# Components and boundaries
 
-## Onde criar limites
+## Where to draw boundaries
 
-- Desenhe limites por eixos de mudança, ownership, volatilidade, risco e
-  características arquiteturais, não por moda ou organograma momentâneo.
-- Agrupe o que muda pela mesma razão. Separe o que muda por razões diferentes.
-- Considere quem publica, implanta e suporta o componente.
-- Comece com independência lógica. Distribua fisicamente apenas quando escala,
-  isolamento, implantação, conformidade ou ownership justificarem o custo.
+- Draw boundaries by axes of change, ownership, volatility, risk, and
+  architectural characteristics, not by trend or a momentary org chart.
+- Group what changes for the same reason. Separate what changes for
+  different reasons.
+- Consider who publishes, deploys, and supports the component.
+- Start with logical independence. Distribute physically only when scale,
+  isolation, deployment, compliance, or ownership justify the cost.
 
-## Coesão e acoplamento
+## Cohesion and coupling
 
-- Avalie se os elementos do componente contribuem para uma finalidade comum.
-- Meça dependências estáticas, temporais, de dados e operacionais.
-- Mantenha o grafo de dependências entre componentes acíclico.
-- Dependências síncronas criam acoplamento operacional em disponibilidade,
-  latência e capacidade. Inclua esse custo na decisão.
-- Elementos estáveis devem depender de abstrações úteis; abstrações sem usuários
-  ou variação apenas escondem complexidade.
+- Evaluate whether the component's elements contribute to a common
+  purpose.
+- Measure static, temporal, data, and operational dependencies.
+- Keep the dependency graph between components acyclic.
+- Synchronous dependencies create operational coupling in availability,
+  latency, and capacity. Include that cost in the decision.
+- Stable elements should depend on useful abstractions; abstractions
+  without users or variation just hide complexity.
 
-## Contratos de fronteira
+## Boundary contracts
 
-- Dados que cruzam limites pertencem a contratos explícitos, mínimos e
-  versionáveis.
-- Não transporte objetos internos inteiros por conveniência.
-- Defina semântica de erro, idempotência, tempo limite, compatibilidade e
+- Data crossing boundaries belongs to explicit, minimal, versionable
+  contracts.
+- Do not transport entire internal objects for convenience.
+- Define error semantics, idempotency, timeout, compatibility, and
   ownership.
-- Uma fronteira parcial pode ser suficiente quando oferece isolamento de código
-  e testes sem custo de processo ou rede.
+- A partial boundary can be enough when it offers code and test isolation
+  without the cost of a process or network hop.
 
-## Heurísticas
+## Heuristics
 
-- Prefira um monólito modular a serviços prematuros.
-- Reuse deliberadamente. Compartilhar código também compartilha calendário de
-  mudança e risco de regressão.
-- Alinhe limites, dados e responsabilidade de equipe sempre que possível.
-- Reavalie granularidade quando componentes mudam juntos, exigem coordenação
-  frequente ou não podem ser operados de forma independente.
+- Prefer a modular monolith to premature services.
+- Reuse deliberately. Sharing code also shares change calendar and
+  regression risk.
+- Align boundaries, data, and team ownership whenever possible.
+- Reassess granularity when components change together, require frequent
+  coordination, or cannot be operated independently.
 

@@ -1,42 +1,42 @@
-# Características, trade-offs e decisões
+# Characteristics, trade-offs, and decisions
 
-## Priorizar
+## Prioritize
 
-- Extraia características do domínio, restrições e riscos, não de uma lista
-  genérica.
-- Escolha um conjunto pequeno de características importantes, como
-  disponibilidade, segurança, modificabilidade, desempenho ou auditabilidade.
-- Torne cada característica observável com cenário, estímulo, ambiente, resposta
-  e medida.
-- Distingua característica global de característica restrita a um fluxo ou
-  componente.
+- Derive characteristics from the domain, constraints, and risks, not from
+  a generic list.
+- Choose a small set of important characteristics, such as availability,
+  security, modifiability, performance, or auditability.
+- Make each characteristic observable with a scenario, stimulus,
+  environment, response, and measure.
+- Distinguish a global characteristic from one restricted to a single flow
+  or component.
 
-## Analisar
+## Analyze
 
-- Toda melhoria tem custo ou efeito colateral. Declare o que foi sacrificado.
-- Compare alternativas no contexto. Inclua complexidade cognitiva, operação,
-  dados, entrega, custo e reversibilidade.
-- Comece pelo menor grau de distribuição que atende às medidas.
-- Métricas são sinais para investigação, não metas isoladas. Quando uma medida
-  vira objetivo, ela pode perder valor diagnóstico.
+- Every improvement has a cost or side effect. State what was sacrificed.
+- Compare alternatives in context. Include cognitive complexity, operation,
+  data, delivery, cost, and reversibility.
+- Start with the smallest degree of distribution that meets the measures.
+- Metrics are signals for investigation, not standalone targets. When a
+  measure becomes a goal, it can lose diagnostic value.
 
-## Registrar decisão
+## Record the decision
 
-Use um ADR quando a decisão:
+Use an ADR when the decision:
 
-- altera uma fronteira, contrato, dado ou característica relevante;
-- é cara de reverter;
-- restringe alternativas futuras;
-- afeta mais de um componente ou equipe;
-- precisa de fiscalização automatizada.
+- alters a relevant boundary, contract, data, or characteristic;
+- is expensive to reverse;
+- restricts future alternatives;
+- affects more than one component or team;
+- needs automated oversight.
 
-Registre contexto, forças, alternativas, decisão, consequências, plano de
-adoção e verificações de conformidade. Não reescreva ADR aceito para apagar o
-histórico. Substitua-o por outro ADR.
+Record context, forces, alternatives, decision, consequences, adoption
+plan, and compliance checks. Do not rewrite an accepted ADR to erase
+history. Replace it with another ADR.
 
 ## Fitness functions
 
-Converta regras objetivas em verificações: testes de dependência, limites de
-latência, compatibilidade de esquema, políticas, análise estática, testes de
-resiliência ou alertas. Uma regra sem forma de inspeção tende a degradar.
+Turn objective rules into checks: dependency tests, latency limits, schema
+compatibility, policies, static analysis, resilience tests, or alerts. A
+rule without an inspection method tends to degrade.
 

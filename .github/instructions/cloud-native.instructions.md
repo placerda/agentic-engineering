@@ -2,27 +2,27 @@
 applyTo: "**/Dockerfile,**/Dockerfile.*,**/docker-compose*.yml,**/docker-compose*.yaml,deploy/**,deployment/**,infra/**,k8s/**,helm/**,charts/**"
 ---
 
-# Aplicações implantáveis e serviços cloud-native
+# Deployable applications and cloud-native services
 
-Estas regras se aplicam a serviços e artefatos de implantação, não a toda
-biblioteca ou script.
+These rules apply to services and deployment artifacts, not to every
+library or script.
 
-- Mantenha dependências explícitas e reproduzíveis.
-- Injete configuração por ambiente e mantenha segredos fora do código e da
-  imagem.
-- Trate banco, fila, cache e serviços externos como recursos substituíveis por
-  configuração e contratos.
-- Separe build, release e execução. O mesmo artefato deve avançar entre
-  ambientes.
-- Prefira processos sem estado; persista estado em serviços apropriados.
-- Exponha serviço por porta quando aplicável e dimensione por processos
-  independentes.
-- Projete inicialização e encerramento rápidos, idempotência e recuperação após
-  interrupção.
-- Reduza diferenças entre desenvolvimento e produção.
-- Emita logs estruturados como fluxo de eventos para coleta externa.
-- Execute tarefas administrativas como processos versionados e auditáveis.
+- Keep dependencies explicit and reproducible.
+- Inject configuration per environment and keep secrets out of the code
+  and the image.
+- Treat databases, queues, caches, and external services as replaceable
+  resources tied to configuration and contracts.
+- Separate build, release, and run. The same artifact must move forward
+  across environments.
+- Prefer stateless processes; persist state in appropriate services.
+- Expose the service through a port when applicable and scale through
+  independent processes.
+- Design for fast startup and shutdown, idempotency, and recovery after
+  interruption.
+- Reduce differences between development and production.
+- Emit structured logs as an event stream for external collection.
+- Run administrative tasks as versioned, auditable processes.
 
-Carregue a skill `cloud-native-service` para decisões de serviço, implantação ou
-operação.
+Load the `cloud-native-service` skill for service, deployment, or operation
+decisions.
 

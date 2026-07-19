@@ -1,47 +1,48 @@
-# Python baseado em PEP 8, PEP 20 e PEP 257
+# Python based on PEP 8, PEP 20, and PEP 257
 
-## Fonte de verdade
+## Source of truth
 
-`pyproject.toml` e as configurações de Ruff, formatador, verificador de tipos e
-testes são executáveis e têm precedência sobre preferências genéricas. Não
-introduza uma ferramenta se o projeto já tem outra equivalente.
+`pyproject.toml` and the configurations for Ruff, the formatter, the type
+checker, and the tests are executable and take precedence over generic
+preferences. Do not introduce a tool if the project already has an
+equivalent one.
 
 ## PEP 8
 
-- Otimize para leitura consistente.
-- Use nomes que expressem intenção e respeitem convenções da base.
-- Organize imports e evite wildcard imports.
-- Separe blocos lógicos sem criar fragmentação visual.
-- Respeite o limite de linha configurado. Quando não houver configuração, use a
-  recomendação oficial como ponto de partida.
-- Consistência local importa, mas não perpetue uma violação que a automação do
-  projeto rejeita.
+- Optimize for consistent readability.
+- Use names that express intent and follow the codebase's conventions.
+- Organize imports and avoid wildcard imports.
+- Separate logical blocks without creating visual fragmentation.
+- Respect the configured line length. When there is no configuration, use
+  the official recommendation as a starting point.
+- Local consistency matters, but do not perpetuate a violation that the
+  project's automation rejects.
 
 ## PEP 20
 
-- Prefira explícito a implícito e simples a complicado.
-- Legibilidade é requisito, não acabamento.
-- Não deixe erros passarem silenciosamente sem decisão explícita.
-- Diante de ambiguidade com impacto, não adivinhe.
-- Se uma implementação é difícil de explicar, reduza ou registre a razão.
+- Prefer explicit over implicit and simple over complicated.
+- Readability is a requirement, not a finishing touch.
+- Do not let errors pass silently without an explicit decision.
+- When facing ambiguity with impact, do not guess.
+- If an implementation is hard to explain, reduce it or record the reason.
 
 ## PEP 257
 
-- Documente módulos e APIs públicas.
-- Docstrings resumem comportamento e contrato, não repetem assinatura.
-- Inclua argumentos, retorno, efeitos colaterais, exceções e restrições quando
-  forem relevantes ao uso correto.
-- Use uma linha para casos simples; use resumo, linha em branco e detalhes para
-  contratos maiores.
-- Documente o comportamento público de classes e diferenças de extensão ou
-  substituição.
+- Document public modules and APIs.
+- Docstrings summarize behavior and contract, not the signature.
+- Include arguments, return value, side effects, exceptions, and
+  constraints when relevant to correct use.
+- Use a one-liner for simple cases; use a summary, blank line, and details
+  for larger contracts.
+- Document the public behavior of classes and any extension or override
+  differences.
 
-## Verificação
+## Verification
 
-Execute, conforme configurado no projeto:
+Run, as configured in the project:
 
-1. Ruff ou linter equivalente.
-2. Formatador em modo de verificação.
-3. Verificador estático de tipos.
-4. Testes específicos e depois o conjunto necessário.
+1. Ruff or an equivalent linter.
+2. The formatter in check mode.
+3. The static type checker.
+4. Specific tests, then the required broader suite.
 

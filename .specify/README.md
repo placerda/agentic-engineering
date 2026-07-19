@@ -1,21 +1,21 @@
-# Fluxo mínimo de especificação
+# Minimal specification flow
 
-Este diretório oferece um fluxo leve inspirado em desenvolvimento orientado por
-especificação. Ele não incorpora nem depende de uma distribuição de terceiros.
+This directory offers a lightweight flow inspired by specification-driven
+development. It does not embed or depend on a third-party distribution.
 
-Use a regra objetiva em `memory/constitution.md`.
+Use the objective rule in `memory/constitution.md`.
 
-## Sequência
+## Sequence
 
-1. Copie `templates/spec-template.md` para
-   `.specify/specs/NNN-nome-curto/spec.md`.
-2. Resolva perguntas que alteram comportamento, dados, segurança ou contrato.
-3. Copie `templates/plan-template.md` para `plan.md` no mesmo diretório.
-4. Registre decisões arquiteturais significativas em `docs/adr/`.
-5. Divida a entrega em tarefas pequenas, cada uma com condição de verificação.
-6. Atualize especificação e plano quando uma decisão mudar. Não deixe o código
-   ser a única fonte do novo comportamento.
+1. Copy `templates/spec-template.md` to
+   `.specify/specs/NNN-short-name/spec.md`.
+2. Resolve questions that alter behavior, data, security, or contract.
+3. Copy `templates/plan-template.md` to `plan.md` in the same directory.
+4. Record significant architectural decisions in `docs/adr/`.
+5. Break the delivery into small tasks, each with a verification condition.
+6. Update the specification and plan when a decision changes. Do not let
+   the code be the only source of the new behavior.
 
-Mantenha a especificação focada no quê e no porquê. O plano descreve como,
-ordem, migração e validação.
+Keep the specification focused on the what and the why. The plan describes
+the how, order, migration, and validation.
 

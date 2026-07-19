@@ -1,42 +1,42 @@
-name: Defeito
-description: Relate comportamento incorreto com evidência reproduzível.
+name: Bug
+description: Report incorrect behavior with reproducible evidence.
 title: "[Bug] "
 labels:
   - bug
 body:
   - type: markdown
     attributes:
-      value: "Não inclua segredos, tokens ou dados pessoais."
+      value: "Do not include secrets, tokens, or personal data."
   - type: textarea
     id: problem
     attributes:
-      label: Problema e impacto
-      description: Quem é afetado e qual é o impacto?
+      label: Problem and impact
+      description: Who is affected and what is the impact?
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Como reproduzir
-      description: Passos mínimos, dados seguros e frequência.
+      label: How to reproduce
+      description: Minimal steps, safe data, and frequency.
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Resultado esperado
+      label: Expected result
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Resultado atual e evidência
-      description: Inclua mensagens sanitizadas, versão e ambiente.
+      label: Actual result and evidence
+      description: Include sanitized messages, version, and environment.
     validations:
       required: true
   - type: textarea
     id: changes
     attributes:
-      label: Mudanças recentes ou contorno
-      description: Informe regressão conhecida e contorno seguro, se houver.
+      label: Recent changes or workaround
+      description: Report a known regression and safe workaround, if any.
 

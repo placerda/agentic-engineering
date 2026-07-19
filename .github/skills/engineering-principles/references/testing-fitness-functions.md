@@ -1,43 +1,43 @@
-# Testes e fitness functions
+# Testing and fitness functions
 
-## Testabilidade arquitetural
+## Architectural testability
 
-- Regras de negócio devem executar sem UI, rede, banco, relógio ou provedor
-  reais.
-- Injete efeitos externos por contratos pequenos. Use implementações reais em
-  testes de integração focados.
-- Controle tempo, aleatoriedade e concorrência para manter determinismo.
-- Se um comportamento importante só pode ser testado por uma jornada completa,
-  a arquitetura provavelmente esconde limites úteis.
+- Business rules must run without a real UI, network, database, clock, or
+  provider.
+- Inject external effects through small contracts. Use real
+  implementations in focused integration tests.
+- Control time, randomness, and concurrency to maintain determinism.
+- If an important behavior can only be tested through a full journey, the
+  architecture is probably hiding useful boundaries.
 
-## Estratégia
+## Strategy
 
-- Testes unitários protegem regras e decisões locais.
-- Testes de contrato protegem fronteiras entre consumidores e provedores.
-- Testes de integração protegem adaptadores e configuração real.
-- Poucos testes ponta a ponta protegem jornadas críticas.
-- Testes devem observar comportamento, não a forma interna de implementá-lo.
-- Um defeito deve ganhar uma reprodução automatizada quando o custo for
-  razoável.
+- Unit tests protect local rules and decisions.
+- Contract tests protect boundaries between consumers and providers.
+- Integration tests protect adapters and real configuration.
+- A few end-to-end tests protect critical journeys.
+- Tests must observe behavior, not the internal way it is implemented.
+- A defect should gain an automated reproduction when the cost is
+  reasonable.
 
 ## Fitness functions
 
-Automatize regras que precisam permanecer verdadeiras, por exemplo:
+Automate rules that must remain true, for example:
 
-- o domínio não importa infraestrutura;
-- o grafo de componentes não contém ciclos;
-- APIs e eventos preservam compatibilidade;
-- latência, disponibilidade ou custo permanecem dentro do orçamento;
-- imagens e dependências atendem políticas de segurança;
-- migrações suportam convivência entre versões;
-- telemetria contém os sinais necessários para operar.
+- the domain does not import infrastructure;
+- the component graph contains no cycles;
+- APIs and events preserve compatibility;
+- latency, availability, or cost stay within budget;
+- images and dependencies meet security policies;
+- migrations support cross-version coexistence;
+- telemetry contains the signals needed to operate.
 
-Escolha o ponto de execução mais barato que ainda detecte a violação a tempo:
-IDE, pre-commit, teste, CI, implantação ou monitoramento.
+Choose the cheapest execution point that still detects the violation in
+time: IDE, pre-commit, test, CI, deployment, or monitoring.
 
-## Evidência de conclusão
+## Completion evidence
 
-Registre comando, escopo, resultado e limitações. Cobertura é um sinal, não uma
-prova de qualidade. Uma tarefa está incompleta se o resultado esperado não puder
-ser verificado.
+Record command, scope, result, and limitations. Coverage is a signal, not
+proof of quality. A task is incomplete if the expected result cannot be
+verified.
 

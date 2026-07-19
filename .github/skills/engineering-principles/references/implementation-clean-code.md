@@ -1,38 +1,43 @@
-# Práticas de implementação e código limpo
+# Implementation practices and clean code
 
-Estas são práticas gerais resumidas, amplamente conhecidas na indústria. Não são
-transcrições nem extrações do livro *Clean Code*.
+Use these practices to keep implementation readable, testable, and easy to
+change.
 
-## Clareza
+## Clarity
 
-- Use nomes que expressem intenção, unidade e domínio. Evite abreviações locais
-  sem valor.
-- Mantenha funções focadas em um resultado e no mesmo nível de abstração.
-- Prefira fluxo explícito a efeitos colaterais ocultos.
-- Reduza aninhamento com validações claras, decomposição e modelos adequados.
-- Comentários explicam motivo, risco ou restrição. Não narram código confuso.
+- Use names that express intent, unit, and domain. Avoid local
+  abbreviations without value.
+- Keep functions focused on one outcome and at the same level of
+  abstraction.
+- Prefer explicit flow over hidden side effects.
+- Reduce nesting with clear validations, decomposition, and suitable
+  models.
+- Comments explain reason, risk, or constraint. They do not narrate
+  confusing code.
 
 ## Design
 
-- Remova duplicação de conhecimento, não apenas texto semelhante.
-- Encapsule invariantes perto dos dados e comportamentos que as mantêm.
-- Não adicione parâmetros, flags ou abstrações para cenários hipotéticos.
-- Torne estados inválidos difíceis de representar quando o custo for razoável.
-- Preserve contratos pequenos e coesos. Evite objetos que conhecem detalhes de
-  muitas camadas.
+- Remove duplication of knowledge, not just similar-looking text.
+- Encapsulate invariants near the data and behavior that maintain them.
+- Do not add parameters, flags, or abstractions for hypothetical
+  scenarios.
+- Make invalid states hard to represent when the cost is reasonable.
+- Keep contracts small and cohesive. Avoid objects that know details from
+  many layers.
 
-## Erros
+## Errors
 
-- Falhe com contexto útil e no nível que pode tomar uma decisão.
-- Não capture exceções amplas para retornar sucesso aparente.
-- Preserve a causa original ao traduzir erros entre fronteiras.
-- Mensagens não devem expor segredo, dado pessoal ou detalhe explorável.
-- Modele recuperação e idempotência para efeitos repetíveis.
+- Fail with useful context and at the level that can make a decision.
+- Do not catch broad exceptions to return apparent success.
+- Preserve the original cause when translating errors across boundaries.
+- Messages must not expose a secret, personal data, or exploitable detail.
+- Model recovery and idempotency for repeatable effects.
 
-## Mudança segura
+## Safe change
 
-- Leia testes e chamadas antes de alterar uma interface.
-- Faça a menor mudança completa e mantenha refatoração separada quando possível.
-- Apague código morto em vez de comentar versões antigas.
-- Use formatador, linter, análise estática e testes configurados pelo projeto.
-
+- Read tests and call sites before changing an interface.
+- Make the smallest complete change and keep refactoring separate when
+  possible.
+- Delete dead code instead of commenting out old versions.
+- Use the formatter, linter, static analysis, and tests configured by the
+  project.

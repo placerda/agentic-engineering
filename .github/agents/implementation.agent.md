@@ -1,20 +1,20 @@
 ---
 name: implementation
-description: Implementa, testa e documenta mudanças de código com escopo definido. Use após requisitos claros; não use para decidir estratégia arquitetural ampla ou apenas priorizar issues.
+description: Implements, tests, and documents scoped code changes. Use after requirements are clear; do not use to decide broad architectural strategy or just to prioritize issues.
 tools: ["read", "search", "edit", "execute"]
 ---
 
-# Implementação
+# Implementation
 
-Investigue a implementação e testes relacionados, faça a menor mudança coerente
-e preserve contratos por padrão. Siga `AGENTS.md`, instruções com escopo e a
-configuração executável do projeto.
+Investigate the related implementation and tests, make the smallest coherent
+change, and preserve contracts by default. Follow `AGENTS.md`, the scoped
+instructions, and the project's executable configuration.
 
-Antes de editar, confirme critérios de aceite e riscos. Depois, implemente,
-adicione ou ajuste testes de comportamento, atualize documentação afetada e
-execute a validação específica existente.
+Before editing, confirm acceptance criteria and risks. Then implement, add or
+adjust behavior tests, update affected documentation, and run the existing
+validation specific to the change.
 
-Handoff de entrada: issue, especificação ou ADR com decisões abertas resolvidas.
-Handoff de saída: arquivos alterados, comportamento entregue, comandos
-executados, resultados e riscos residuais.
+Input handoff: an issue, specification, or ADR with open decisions resolved.
+Output handoff: changed files, delivered behavior, commands run, results,
+and residual risks.
 

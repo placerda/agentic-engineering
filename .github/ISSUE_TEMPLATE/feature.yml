@@ -1,50 +1,50 @@
-name: Mudança de produto ou engenharia
-description: Proponha um resultado com critérios de aceite e limites claros.
-title: "[Mudança] "
+name: Product or engineering change
+description: Propose an outcome with clear acceptance criteria and boundaries.
+title: "[Change] "
 body:
   - type: textarea
     id: problem
     attributes:
-      label: Problema e público
-      description: Que problema existe, para quem e por que agora?
+      label: Problem and audience
+      description: What problem exists, for whom, and why now?
     validations:
       required: true
   - type: textarea
     id: outcome
     attributes:
-      label: Resultado esperado
-      description: Descreva comportamento observável, não uma solução preferida.
+      label: Expected outcome
+      description: Describe observable behavior, not a preferred solution.
     validations:
       required: true
   - type: textarea
     id: acceptance
     attributes:
-      label: Critérios de aceite
+      label: Acceptance criteria
       placeholder: |
-        - Dado...
-        - Quando...
-        - Então...
+        - Given...
+        - When...
+        - Then...
     validations:
       required: true
   - type: textarea
     id: scope
     attributes:
-      label: Escopo e fora de escopo
+      label: Scope and out of scope
     validations:
       required: true
   - type: checkboxes
     id: risk
     attributes:
-      label: Gatilhos de especificação
+      label: Specification triggers
       options:
-        - label: Afeta segurança, privacidade ou limite de confiança
-        - label: Migra dados com risco de perda ou indisponibilidade
-        - label: Altera contrato público ou persistido
-        - label: Cruza três ou mais componentes
-        - label: Envolve várias equipes ou etapas
+        - label: Affects security, privacy, or a trust boundary
+        - label: Migrates data with risk of loss or unavailability
+        - label: Changes a public or persisted contract
+        - label: Crosses three or more components
+        - label: Involves multiple teams or stages
   - type: textarea
     id: evidence
     attributes:
-      label: Evidência de conclusão
-      description: Como saberemos que a mudança funciona?
+      label: Completion evidence
+      description: How will we know the change works?
 

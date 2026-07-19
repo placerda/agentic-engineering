@@ -1,22 +1,23 @@
 ---
 name: cloud-native-service
-description: Avalia e implementa aplicações implantáveis segundo práticas cloud-native e Twelve-Factor contextualizadas. Use em serviços, containers e implantação; não use para bibliotecas ou scripts sem operação de serviço.
+description: Evaluates and implements deployable applications following contextualized cloud-native and Twelve-Factor practices. Use for services, containers, and deployment; do not use for libraries or scripts without service operation.
 ---
 
-# Serviço cloud-native
+# Cloud-native service
 
-Leia
-`../engineering-principles/references/cloud-native-twelve-factor.md` e, quando
-houver comunicação distribuída,
+Read
+`../engineering-principles/references/cloud-native-twelve-factor.md` and,
+when there is distributed communication,
 `../engineering-principles/references/data-integration.md`.
 
-1. Confirme unidade de implantação, ambientes e modelo operacional.
-2. Revise dependências, configuração, segredos e serviços anexados.
-3. Garanta separação entre build, release e run.
-4. Modele estado, escala, interrupção, idempotência e tarefas administrativas.
-5. Defina logs, métricas, traces, health checks e recuperação.
-6. Verifique segurança da cadeia, identidade e privilégio mínimo.
+1. Confirm the deployment unit, environments, and operating model.
+2. Review dependencies, configuration, secrets, and attached services.
+3. Ensure separation between build, release, and run.
+4. Model state, scaling, interruption, idempotency, and administrative
+   tasks.
+5. Define logs, metrics, traces, health checks, and recovery.
+6. Verify chain security, identity, and least privilege.
 
-Documente quais fatores não se aplicam e por quê. Não distribua componentes
-somente para parecer cloud-native.
+Document which factors do not apply and why. Do not distribute components
+just to appear cloud-native.
 

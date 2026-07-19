@@ -1,35 +1,35 @@
-## Problema e resultado
+## Problem and outcome
 
-[Explique o problema e o comportamento entregue.]
+[Explain the problem and the delivered behavior.]
 
-## Mudanças
+## Changes
 
-- [mudança relevante]
+- [relevant change]
 
-## Evidência
+## Evidence
 
-| Verificação | Comando ou método | Resultado |
+| Check | Command or method | Result |
 | --- | --- | --- |
-| [critério] | `[comando]` | [resultado] |
+| [criterion] | `[command]` | [result] |
 
-## Contratos, dados e operação
+## Contracts, data, and operation
 
-[Compatibilidade, migração, segurança, observabilidade e recuperação. Use "N/A"
-quando não aplicável.]
+[Compatibility, migration, security, observability, and recovery. Use "N/A"
+when not applicable.]
 
-## Documentação
+## Documentation
 
-[Links para páginas atualizadas ou justificativa de não aplicação.]
+[Links to updated pages or justification for not applying.]
 
-## Riscos residuais
+## Residual risks
 
-[Riscos, validações não executadas e acompanhamento.]
+[Risks, validations not run, and follow-up.]
 
 ## Checklist
 
-- [ ] A mudança está limitada ao problema.
-- [ ] Testes protegem comportamento ou contrato.
-- [ ] Segredos e dados sensíveis não foram incluídos.
-- [ ] Migração e recuperação foram consideradas.
-- [ ] Documentação afetada foi atualizada.
+- [ ] The change is scoped to the problem.
+- [ ] Tests protect behavior or contract.
+- [ ] Secrets and sensitive data were not included.
+- [ ] Migration and recovery were considered.
+- [ ] Affected documentation was updated.
 

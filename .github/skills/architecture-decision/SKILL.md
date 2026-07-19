@@ -1,20 +1,21 @@
 ---
 name: architecture-decision
-description: Conduz e registra uma decisão arquitetural verificável. Use quando a escolha altera fronteiras, contratos, características, dados ou operação e tem custo relevante de reversão.
+description: Conducts and records a verifiable architectural decision. Use when the choice alters boundaries, contracts, characteristics, data, or operation and has a meaningful reversal cost.
 ---
 
-# Decisão arquitetural
+# Architectural decision
 
-1. Leia `../engineering-principles/references/architecture-core.md` e
+1. Read `../engineering-principles/references/architecture-core.md` and
    `../engineering-principles/references/architecture-characteristics.md`.
-2. Acrescente as referências de componentes ou dados quando aplicáveis.
-3. Defina contexto, restrições e até cinco características priorizadas com
-   medidas.
-4. Compare pelo menos duas alternativas viáveis e a opção de não mudar.
-5. Declare benefícios, custos, riscos, reversibilidade e impacto operacional.
-6. Registre a decisão com `docs/adr/template.md`.
-7. Defina fitness functions, adoção, migração e gatilho de revisão.
+2. Add the component or data references when applicable.
+3. Define context, constraints, and up to five prioritized characteristics
+   with measures.
+4. Compare at least two viable alternatives and the option of not changing.
+5. State benefits, costs, risks, reversibility, and operational impact.
+6. Record the decision with `docs/adr/template.md`.
+7. Define fitness functions, adoption, migration, and the review trigger.
 
-Não transforme preferência de ferramenta em requisito arquitetural. Se faltarem
-dados para decidir, registre uma investigação com prazo e critério de decisão.
+Do not turn a tool preference into an architectural requirement. If data is
+missing to decide, record an investigation with a deadline and decision
+criterion.
 

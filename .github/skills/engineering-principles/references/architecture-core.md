@@ -1,40 +1,42 @@
-# Núcleo de arquitetura
+# Architecture core
 
-## Propósito
+## Purpose
 
-- A organização do sistema deve revelar capacidades e linguagem do negócio,
-  não apenas frameworks ou tipos técnicos.
-- Arquitetura existe para manter opções importantes abertas e reduzir o custo
-  total de mudar, operar e verificar o sistema.
-- Não há estilo universalmente melhor. Toda escolha responde a contexto,
-  restrições e trade-offs.
+- The organization of the system should reveal business capabilities and
+  language, not just frameworks or technical types.
+- Architecture exists to keep important options open and to reduce the
+  total cost of changing, operating, and verifying the system.
+- There is no universally best style. Every choice responds to context,
+  constraints, and trade-offs.
 
-## Direção das dependências
+## Direction of dependencies
 
-- Dependências de código apontam para políticas estáveis e regras do domínio.
-- Interface, persistência, transporte, framework e provedor são mecanismos
-  substituíveis, não o centro do modelo.
-- Modelos de ORM, HTTP, mensageria ou SDK não devem atravessar o núcleo. Converta
-  para contratos mínimos na fronteira.
-- O fluxo de execução pode sair do núcleo, mas a dependência de código continua
-  apontando para dentro por meio de portas, callbacks ou interfaces.
+- Code dependencies point toward stable policies and domain rules.
+- Interface, persistence, transport, framework, and provider are
+  replaceable mechanisms, not the center of the model.
+- ORM, HTTP, messaging, or SDK models must not cross the core. Convert them
+  to minimal contracts at the boundary.
+- The flow of execution can leave the core, but the code dependency keeps
+  pointing inward through ports, callbacks, or interfaces.
 
-## Decisões
+## Decisions
 
-- Separe política de mecanismo. A política descreve o que deve acontecer; o
-  mecanismo descreve como um ambiente realiza isso.
-- Prefira decisões reversíveis quando o conhecimento ainda é baixo.
-- Adie detalhes sem bloquear aprendizado essencial.
-- Justifique abstrações por estabilidade, variação concreta ou proteção de uma
-  fronteira. Evite generalidade especulativa.
-- Trate arquitetura como atividade contínua. Verifique se implementação, dados,
-  entrega, observabilidade e operação ainda expressam a decisão.
+- Separate policy from mechanism. Policy describes what should happen;
+  mechanism describes how an environment carries it out.
+- Prefer reversible decisions while knowledge is still low.
+- Defer details without blocking essential learning.
+- Justify abstractions by stability, concrete variation, or protecting a
+  boundary. Avoid speculative generality.
+- Treat architecture as a continuous activity. Check whether
+  implementation, data, delivery, observability, and operation still
+  express the decision.
 
-## Perguntas de revisão
+## Review questions
 
-1. Que capacidade de negócio esta estrutura torna evidente?
-2. O núcleo pode executar sem UI, rede, banco, relógio ou provedor real?
-3. Qual detalhe teria maior custo de substituição hoje?
-4. A dependência está orientada para a parte mais estável?
-5. Que evidência mostra que a decisão funciona sob as restrições reais?
+1. What business capability does this structure make evident?
+2. Can the core run without a UI, network, database, clock, or real
+   provider?
+3. Which detail would have the highest replacement cost today?
+4. Is the dependency oriented toward the most stable part?
+5. What evidence shows the decision works under the real constraints?
 
