@@ -1,0 +1,36 @@
+# Sistemas operacionais e editores
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Node.js
+node_modules/
+coverage/
+
+# Arquivos temporários
+*.log
+*.tmp
+tmp/
+

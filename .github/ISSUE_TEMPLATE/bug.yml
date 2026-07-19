@@ -1,0 +1,42 @@
+name: Defeito
+description: Relate comportamento incorreto com evidência reproduzível.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: "Não inclua segredos, tokens ou dados pessoais."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema e impacto
+      description: Quem é afetado e qual é o impacto?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir
+      description: Passos mínimos, dados seguros e frequência.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado atual e evidência
+      description: Inclua mensagens sanitizadas, versão e ambiente.
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Mudanças recentes ou contorno
+      description: Informe regressão conhecida e contorno seguro, se houver.
+

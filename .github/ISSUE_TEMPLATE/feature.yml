@@ -1,0 +1,50 @@
+name: Mudança de produto ou engenharia
+description: Proponha um resultado com critérios de aceite e limites claros.
+title: "[Mudança] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema e público
+      description: Que problema existe, para quem e por que agora?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Resultado esperado
+      description: Descreva comportamento observável, não uma solução preferida.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: |
+        - Dado...
+        - Quando...
+        - Então...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo e fora de escopo
+    validations:
+      required: true
+  - type: checkboxes
+    id: risk
+    attributes:
+      label: Gatilhos de especificação
+      options:
+        - label: Afeta segurança, privacidade ou limite de confiança
+        - label: Migra dados com risco de perda ou indisponibilidade
+        - label: Altera contrato público ou persistido
+        - label: Cruza três ou mais componentes
+        - label: Envolve várias equipes ou etapas
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidência de conclusão
+      description: Como saberemos que a mudança funciona?
+
