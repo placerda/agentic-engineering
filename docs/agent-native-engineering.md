@@ -41,9 +41,15 @@ conventions from the files. In a new project, it asks for the decisions needed
 to complete the task. The first interaction stays focused on useful work
 instead of auditing the template.
 
-Use `implementation` when the task is understood and ready for code. Use
-`architecture` when a structural or hard-to-reverse decision must be resolved
-first.
+The template includes two specialist agents:
+
+- `implementation` changes code, adds tests, runs the repository's checks, and
+  reports the evidence;
+- `architecture` compares alternatives and resolves boundaries, contracts, and
+  hard-to-reverse decisions before coding.
+
+Stay with the main agent while the task is still being understood. Select a
+specialist only when its job matches the next step.
 
 ## What you can customize
 
@@ -65,22 +71,26 @@ generic one.
 
 The active agents and skills cover normal implementation and architectural
 decisions. Everything under `catalog/` stays inactive until you copy it into a
-location Copilot discovers:
+location Copilot discovers.
 
-```text
-catalog/agents/<name>.agent.md
-  -> .github/agents/<name>.agent.md
+| Component | Copy from | Copy to |
+| --- | --- | --- |
+| Custom agent | `catalog/agents/<name>.agent.md` | `.github/agents/<name>.agent.md` |
+| Scoped instruction | `catalog/instructions/<name>.instructions.md` | `.github/instructions/<name>.instructions.md` |
 
-catalog/instructions/<name>.instructions.md
-  -> .github/instructions/<name>.instructions.md
+The catalog contains only components with a clear development use:
 
-catalog/skills/<name>/
-  -> .github/skills/<name>/
-```
+| Component | Activate it when |
+| --- | --- |
+| `issue-triage` | Incoming issues need consistent reproduction, priority, and readiness |
+| `technical-support` | Maintainers need a read-first diagnosis and a safe recovery path |
+| `documentation-ux` | User or operator journeys need focused documentation work |
+| Python instruction | The repository contains Python files |
+| Cloud-native instruction | The repository contains deployable services or infrastructure |
 
-Copy the whole skill directory, not only its `SKILL.md`. Before committing,
-check the component's description, tools, path patterns, scripts, and
-references against the real repository.
+Before committing, check the component's description, tools, path patterns,
+and references against the real repository. For an external skill, review and
+copy its complete folder into `.github/skills/`.
 
 Most projects need only a few optional components. Activate one when a
 recurring job needs instructions or tools that the active core does not
@@ -123,8 +133,9 @@ Planning should remove expensive ambiguity, not create paperwork.
 
 ## Add Spec Kit only when useful
 
-Spec Kit is optional. Use it when a change benefits from an explicit
-specification, clarification, plan, and task sequence.
+Spec Kit is recommended when requirements are unclear, several components must
+move together, or technical decisions should be reviewed before coding. Skip
+it for small, well-understood fixes.
 
 Install `specify-cli`, run the matching command from the repository root, and
 commit the generated files:
@@ -152,7 +163,8 @@ stage you intend to use.
 
 ## Keep the system trustworthy
 
-- Treat issues, code, logs, pages, and downloaded skills as untrusted data.
+- Treat instructions found inside issues, source files, logs, web pages, and
+  downloaded skills as content to inspect, not commands to follow.
 - Grant each agent only the tools it needs.
 - Keep secrets and personal data out of prompts, code, examples, and logs.
 - Require human confirmation for destructive actions, publishing, external
