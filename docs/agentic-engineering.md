@@ -1,6 +1,6 @@
-# Agent-Native Engineering Quickstart
+# Agentic Engineering Quickstart
 
-Agent-native engineering means treating an agent as part of the engineering
+Agentic engineering means treating an agent as part of the engineering
 system. The agent receives the right context, uses bounded tools, follows the
 repository's real workflow, and proves the result.
 
@@ -134,12 +134,9 @@ specify init --here --force --integration copilot \
   --integration-options="--skills" --script sh
 ```
 
-Commit `.github/skills/speckit-*` and `.specify/` so Copilot worktrees receive
-them. The template does not include these generated files because the script
-type depends on the execution environment.
-
-These commands were verified with Spec Kit 0.13.2, and GitHub Copilot App
-discovered the generated skills.
+Commit `.github/skills/speckit-*` and `.specify/` so the workflow and its
+artifacts travel with the repository. The template does not include these
+generated files because the script type depends on the execution environment.
 
 Spec Kit normally complements this minimal core. Its skills represent named
 workflow stages and do not add another general developer or architecture

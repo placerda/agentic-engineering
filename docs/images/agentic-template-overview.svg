@@ -37,7 +37,7 @@
 
   <rect x="520" y="480" width="390" height="125" rx="13" fill="#DFF6DD" stroke="#107C10" stroke-width="2"/>
   <text x="715" y="523" text-anchor="middle" class="card-title">HUMAN GUIDE</text>
-  <text x="715" y="560" text-anchor="middle" class="small">Agent-Native Engineering guide</text>
+  <text x="715" y="560" text-anchor="middle" class="small">Agentic Engineering guide</text>
 
   <rect x="100" y="725" width="800" height="190" rx="15" fill="none" stroke="#5C2D91" stroke-width="2"/>
   <text x="125" y="765" class="section">OPTIONAL SPECIALISTS · INACTIVE UNTIL COPIED</text>

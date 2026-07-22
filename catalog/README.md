@@ -1,7 +1,7 @@
 # Catalog
 
 Copy a specialist into `.github/agents/` to activate it. See the
-[quickstart](../docs/agent-native-engineering.md) for details.
+[quickstart](../docs/agentic-engineering.md) for details.
 
 | Agent | Purpose |
 | --- | --- |

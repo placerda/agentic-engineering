@@ -1,6 +1,6 @@
-# Agent-Native Engineering
+# Agentic Engineering
 
-A minimal GitHub Copilot template for agent-native engineering.
+A minimal GitHub Copilot template for agentic engineering.
 
 It starts with two custom agents, foundational skills, and issue and pull
 request templates. Optional specialists stay inactive in `catalog/` until
@@ -28,7 +28,7 @@ or a [supported IDE](https://docs.github.com/en/copilot/how-tos/set-up/install-c
 3. Approve the plan, let Copilot implement it, and review the evidence.
 
 That is enough to begin. The
-[quickstart](docs/agent-native-engineering.md) explains the model and
+[quickstart](docs/agentic-engineering.md) explains the model and
 where to customize it.
 
 > Active components load from their standard repository locations.
@@ -45,14 +45,14 @@ where to customize it.
 | Active skills | [Engineering principles](.github/skills/engineering-principles/SKILL.md) and [architecture decisions](.github/skills/architecture-decision/SKILL.md) |
 | Optional catalog | [Specialist agents](catalog/) for triage, support, and documentation |
 | Workflow | [Issue templates](.github/ISSUE_TEMPLATE/) and the [pull request template](.github/pull_request_template.md) |
-| Quickstart | [Agent-Native Engineering Quickstart](docs/agent-native-engineering.md) |
+| Quickstart | [Agentic Engineering Quickstart](docs/agentic-engineering.md) |
 
 Use `implementation` when a task is understood and ready for code. Use
 `architecture` when a structural or hard-to-reverse decision must be resolved
 first.
 
 <p align="center">
-  <img src="docs/images/agent-native-template-overview.png"
+  <img src="docs/images/agentic-template-overview.png"
        alt="Overview of the active core and optional specialist agents"
        width="620">
 </p>
@@ -61,7 +61,7 @@ first.
 
 The template works without Spec Kit. Add it when requirements are unclear or
 several components must change together. The
-[Spec Kit setup](docs/agent-native-engineering.md#add-spec-kit-only-when-useful)
+[Spec Kit setup](docs/agentic-engineering.md#add-spec-kit-only-when-useful)
 explains when to use it, how to install it, and what to commit.
 
 ## Sources and licensing
