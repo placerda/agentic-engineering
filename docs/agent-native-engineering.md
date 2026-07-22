@@ -27,36 +27,21 @@ work at hand.
 
 ## Use it before you customize it
 
-Create a repository from the template and choose the path that matches the
-project.
-
-For an existing repository, let Copilot compare the template with evidence:
+Create a repository from the template, select the `implementation` agent, and
+give it one small, real task:
 
 ```text
-Inspect the manifests, scripts, CI workflows, source tree, tests, and
-documentation in this repository. Compare that evidence with AGENTS.md and the
-files under .github/. Propose only changes supported by what you find, list the
-commands you verified, and flag anything that still needs a human decision. Do
-not edit yet.
+I want to [describe a small, checkable outcome]. Inspect what already exists,
+propose the smallest plan, and tell me how you will verify it. Ask me only for
+decisions the repository cannot answer. Wait for my approval before editing.
 ```
 
-For a new project, give Copilot the product goal and let it ask for missing
-decisions:
+In an existing repository, Copilot can infer the stack, commands, layout, and
+conventions from the files. In a new project, it asks for the decisions needed
+to complete the task. The first interaction stays focused on useful work
+instead of auditing the template.
 
-```text
-This is a new project for [describe the product in one sentence]. Before
-editing, ask me only for decisions that cannot be discovered yet, such as the
-stack, commands, source layout, deployment target, and quality gates. Then
-propose the smallest agent-native setup that fits those decisions. Do not edit
-yet.
-```
-
-Review the proposal and keep only verified facts or explicit decisions.
-Copilot should discover real commands from an existing repository and verify
-them before documenting them.
-
-Then give the `implementation` agent a small issue with a clear outcome and
-acceptance criteria. Use `architecture` only for a structural or
+Use `architecture` instead only when the first task requires a structural or
 hard-to-reverse decision.
 
 ## What you can customize
@@ -77,55 +62,60 @@ generic one.
 
 ## Activate optional components
 
-The active setup covers normal implementation and architectural decisions.
-The catalog offers optional components for:
+The active agents and skills cover normal implementation and architectural
+decisions. Everything under `catalog/` stays inactive until you copy it into a
+location Copilot discovers:
 
-- issue triage;
-- technical support;
-- documentation and user experience;
-- multi-agent orchestration;
-- workplace communications;
-- Python development;
-- cloud-native services.
+```text
+catalog/agents/<name>.agent.md
+  -> .github/agents/<name>.agent.md
 
-Copy only the selected file or skill directory into the equivalent
-`.github/` location. Review its tools, description, paths, and references
-before committing it.
+catalog/instructions/<name>.instructions.md
+  -> .github/instructions/<name>.instructions.md
 
-Most projects do not need every component. Add a handoff only when
-specialization reduces risk or separates a genuinely independent context. A
-useful handoff states the objective, source of truth, scope, decisions, risks,
-exit condition, and expected evidence.
+catalog/skills/<name>/
+  -> .github/skills/<name>/
+```
 
-## Prevent overlap
+Copy the whole skill directory, not only its `SKILL.md`. Before committing,
+check the component's description, tools, path patterns, scripts, and
+references against the real repository.
 
-Use one active component per capability. When importing agents or skills from
-another repository, plugin, or framework:
+Most projects need only a few optional components. Activate one when a
+recurring job needs instructions or tools that the active core does not
+provide.
 
-1. Map each incoming component to a capability such as implementation,
-   architecture, planning, infrastructure, or documentation.
-2. If that capability already exists, replace it or merge the useful rules.
-3. Keep both only when their scopes and selection criteria are clearly
-   different.
-4. Remove stale references and verify which component Copilot actually loads.
+## Avoid overlapping components
 
-Two general developer agents or two architecture agents create ambiguous
-routing and inconsistent handoffs. Overlapping skills can load duplicate or
-contradictory procedures. More components do not mean a more capable system.
+Keep one active component for each job. When you add something from the
+catalog, another repository, or a plugin:
+
+- **Same job:** replace the existing component or merge the useful rules into
+  it. Do not keep both.
+- **New job:** activate it as-is.
+- **Related but distinct job:** keep both only when their descriptions make
+  the selection boundary obvious.
+
+For example, do not add another general developer agent beside
+`implementation`, or another architecture agent beside `architecture`. After
+replacing a component, remove stale references and confirm which one Copilot
+loads.
 
 ## Match planning to risk
 
-For a local, reversible change:
+Planning depth should follow the cost of being wrong.
+
+For a local, reversible change, keep it light:
 
 1. Define the problem, outcome, and acceptance criteria.
 2. Implement the smallest coherent change.
 3. Run the most relevant checks.
 4. Record the evidence.
 
-For a broad or hard-to-reverse change, resolve contracts, data, security,
-migration, recovery, and operational impact before implementation. Use the
-`architecture` agent and `architecture-decision` skill when a decision needs
-explicit alternatives, consequences, and fitness functions.
+For a broad or hard-to-reverse change, resolve the relevant contracts, data,
+security, migration, recovery, and operational questions before coding. Use
+the `architecture` agent and `architecture-decision` skill when the decision
+needs explicit alternatives, consequences, and fitness functions.
 
 Planning should remove expensive ambiguity, not create paperwork.
 
