@@ -28,6 +28,11 @@ That is enough to begin. The
 [`Agent-Native Engineering guide`](docs/agent-native-engineering.md) explains
 the model and the optional customization points.
 
+> Active components load from their standard repository locations.
+> `catalog/` files stay inactive until copied. Availability varies across
+> GitHub.com, Copilot App, CLI, and IDEs. See the guide for loading and
+> activation details.
+
 ## What you get
 
 | Area | Included |
@@ -72,18 +77,6 @@ specification-driven workflow. It is optional and generated per project.
 The template does not pre-populate those files because Spec Kit generates
 environment-specific scripts. These commands were verified with Spec Kit
 0.13.2 and the generated skills were discovered by GitHub Copilot App.
-
-## How Copilot loads this setup
-
-- Core instructions are discovered from their standard repository locations.
-- Scoped instructions apply only to matching files.
-- Agents and skills are loaded when selected or relevant.
-- Files under `catalog/` remain inactive until copied to a supported
-  `.github/` location.
-- The guide in `docs/` is human reference material and is read only when opened
-  or referenced.
-
-Feature availability can vary across GitHub.com, Copilot App, CLI, and IDEs.
 
 ## Sources and licensing
 
