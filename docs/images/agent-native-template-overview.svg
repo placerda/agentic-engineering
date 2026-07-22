@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="990" viewBox="0 0 1000 990" role="img" aria-labelledby="title desc">
+  <title id="title">What this template gives you</title>
+  <desc id="desc">The active repository context, agents, skills, workflow templates, human guide, and optional specialist agents.</desc>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #000; }
+    .title { font-size: 34px; font-weight: 700; }
+    .subtitle { font-size: 18px; fill: #333; }
+    .section { font-size: 18px; font-weight: 700; letter-spacing: 1.5px; }
+    .card-title { font-size: 20px; font-weight: 700; }
+    .card-text { font-size: 18px; }
+    .small { font-size: 16px; }
+  </style>
+
+  <rect width="1000" height="990" fill="#fff"/>
+  <text x="500" y="52" text-anchor="middle" class="title">What this template gives you</text>
+  <text x="500" y="90" text-anchor="middle" class="subtitle">A small active core with optional specialists</text>
+
+  <rect x="50" y="125" width="900" height="555" rx="15" fill="none" stroke="#0078D4" stroke-width="2"/>
+  <text x="75" y="165" class="section">ACTIVE BY DEFAULT</text>
+
+  <rect x="90" y="190" width="820" height="105" rx="13" fill="#CFE4FA" stroke="#0078D4" stroke-width="2"/>
+  <text x="500" y="230" text-anchor="middle" class="card-title">REPOSITORY CONTEXT</text>
+  <text x="500" y="265" text-anchor="middle" class="card-text">AGENTS.md · Copilot instructions</text>
+
+  <rect x="90" y="325" width="390" height="125" rx="13" fill="#FFF4CE" stroke="#F7630C" stroke-width="2"/>
+  <text x="285" y="368" text-anchor="middle" class="card-title">ACTIVE AGENTS</text>
+  <text x="285" y="405" text-anchor="middle" class="card-text">implementation · architecture</text>
+
+  <rect x="520" y="325" width="390" height="125" rx="13" fill="#E8DAEF" stroke="#5C2D91" stroke-width="2"/>
+  <text x="715" y="368" text-anchor="middle" class="card-title">ACTIVE SKILLS</text>
+  <text x="715" y="405" text-anchor="middle" class="small">engineering principles</text>
+  <text x="715" y="430" text-anchor="middle" class="small">architecture decisions</text>
+
+  <rect x="90" y="480" width="390" height="125" rx="13" fill="#D9F3F7" stroke="#0C8599" stroke-width="2"/>
+  <text x="285" y="523" text-anchor="middle" class="card-title">WORKFLOW</text>
+  <text x="285" y="560" text-anchor="middle" class="small">issue and pull request templates</text>
+
+  <rect x="520" y="480" width="390" height="125" rx="13" fill="#DFF6DD" stroke="#107C10" stroke-width="2"/>
+  <text x="715" y="523" text-anchor="middle" class="card-title">HUMAN GUIDE</text>
+  <text x="715" y="560" text-anchor="middle" class="small">Agent-Native Engineering guide</text>
+
+  <rect x="100" y="725" width="800" height="190" rx="15" fill="none" stroke="#5C2D91" stroke-width="2"/>
+  <text x="125" y="765" class="section">OPTIONAL SPECIALISTS · INACTIVE UNTIL COPIED</text>
+
+  <rect x="135" y="795" width="220" height="80" rx="11" fill="#F3F2F1" stroke="#605E5C" stroke-width="2"/>
+  <text x="245" y="830" text-anchor="middle" class="card-title">ISSUE TRIAGE</text>
+  <text x="245" y="858" text-anchor="middle" class="small">Clarify and prioritize</text>
+
+  <rect x="390" y="795" width="220" height="80" rx="11" fill="#F3F2F1" stroke="#605E5C" stroke-width="2"/>
+  <text x="500" y="830" text-anchor="middle" class="card-title">SUPPORT</text>
+  <text x="500" y="858" text-anchor="middle" class="small">Diagnose failures</text>
+
+  <rect x="645" y="795" width="220" height="80" rx="11" fill="#F3F2F1" stroke="#605E5C" stroke-width="2"/>
+  <text x="755" y="830" text-anchor="middle" class="card-title">DOCS UX</text>
+  <text x="755" y="858" text-anchor="middle" class="small">Document journeys</text>
+
+  <text x="500" y="960" text-anchor="middle" class="subtitle">Start with the core. Add a specialist only when the need repeats.</text>
+</svg>
