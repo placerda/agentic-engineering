@@ -50,8 +50,8 @@ first.
 
 ## Optional: add GitHub Spec Kit
 
-[GitHub Spec Kit](https://github.com/github/spec-kit) adds a
-specification-driven workflow. It is optional and generated per project.
+[GitHub Spec Kit](https://github.com/github/spec-kit) adds an optional
+specification workflow generated for each project.
 
 1. Install `specify-cli` using the official
    [installation guide](https://github.com/github/spec-kit/blob/main/docs/installation.md).
@@ -84,5 +84,4 @@ The model draws on established software architecture, implementation, Python,
 cloud-native, and agentic engineering guidance. The bibliography is in
 [`sources.md`](.github/skills/engineering-principles/references/sources.md).
 
-This repository does not declare a license. Define an appropriate license
-before redistributing the model.
+This repository is available under the [MIT License](LICENSE).
