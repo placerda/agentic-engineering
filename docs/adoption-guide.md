@@ -83,7 +83,38 @@ Adapt the issue templates and planning expectations to the real process:
 Avoid requiring extensive planning for simple fixes. Also avoid using a vague
 issue for data migration, security change, or an incompatible contract.
 
-## 7. Integrate quality
+## 7. Add Spec Kit when needed
+
+Adopt [GitHub Spec Kit](https://github.com/github/spec-kit) when the project
+needs a specification-driven workflow. Install `specify-cli` 0.13.2 and
+initialize it from the consuming project's repository root.
+
+For local Windows, select PowerShell scripts and skills mode:
+
+```shell
+specify init --here --force --integration copilot --integration-options="--skills" --script ps
+```
+
+For Linux or a cloud environment, select shell scripts and skills mode:
+
+```shell
+specify init --here --force --integration copilot --integration-options="--skills" --script sh
+```
+
+Skills mode is the modern layout in Spec Kit 0.13.2. The legacy `.agent.md`
+plus `.prompt.md` layout is deprecated. Review and version the generated
+`.github/skills/speckit-*` files and required `.specify/` infrastructure so
+GitHub Copilot App worktrees can use them. Initialize the consuming project
+instead of copying `.specify/` from this template. This keeps generated files
+aligned with the project's Spec Kit version, Copilot integration mode, and
+execution environment.
+
+The expected result is a generated skills integration and its supporting
+Spec Kit infrastructure. If `specify` is unavailable or an option is rejected,
+verify the CLI installation and version, then rerun the command. Review
+conflicts and partial generated changes before retrying with `--force`.
+
+## 8. Integrate quality
 
 This repository does not provide an executable workflow because it does
 not know the target stack. In the consuming project, connect fitness
@@ -99,7 +130,7 @@ functions to the mechanisms already adopted:
 Each gate needs an owner, acceptable time, actionable message, and an
 exception process.
 
-## 8. Run a pilot
+## 9. Run a pilot
 
 Choose a real, low-risk change and observe:
 
@@ -122,6 +153,7 @@ Adjust the model based on these signals, not on the volume of files.
 - [ ] Skills have one canonical source per rule.
 - [ ] Planning depth reflects the product's risk.
 - [ ] Templates reflect the team's process.
+- [ ] Spec Kit generated files are reviewed and versioned when it is adopted.
 - [ ] CI runs important objective rules.
 - [ ] Links, names, and paths have been verified.
 - [ ] An owner and periodic review have been defined.

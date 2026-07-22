@@ -9,18 +9,21 @@ The repository uses progressive disclosure:
 2. Specific instructions load only for matching files.
 3. Functional agents take on roles with minimal tools.
 4. Skills load procedures and references only when relevant.
-5. Documentation in `docs/` serves people and can be opened when a skill or
-   instruction points to it. It is not automatic context.
+5. Documentation in `docs/` provides human guidance and loads only when
+   referenced.
 
 ## Quick start
 
-1. Read [`AGENTS.md`](AGENTS.md) to learn the operating contract.
-2. Choose the agent from the table in [`docs/routing.md`](docs/routing.md).
-3. For a simple change, work from an issue with acceptance criteria.
-4. For a broad or high-risk change, resolve contract, data, security,
+1. Start with the [`adoption guide`](docs/adoption-guide.md) and adapt the
+   template to the repository's real tools and process.
+2. Choose the agent from [`docs/routing.md`](docs/routing.md).
+3. For a simple change, work from an issue with acceptance criteria. For a
+   broad or high-risk change, resolve contract, data, security,
    migration, and recovery decisions before implementation.
-5. Before concluding, produce reproducible evidence that the expected
-   behavior works.
+4. Run the repository's relevant checks and record reproducible evidence.
+
+[`AGENTS.md`](AGENTS.md) is the operating contract Copilot reads. Maintainers
+should review and adapt it before using the template.
 
 ## Repository map
 
@@ -41,25 +44,27 @@ unused agents, and enable only the instructions compatible with the present
 technology. The full roadmap is in
 [`docs/adoption-guide.md`](docs/adoption-guide.md).
 
-## Optional: GitHub Spec Kit
+## Add GitHub Spec Kit
 
 [GitHub Spec Kit](https://github.com/github/spec-kit) is a separate official
-open-source GitHub project. It is not built into GitHub Copilot and is not
-preinstalled by this template.
+open-source GitHub project for specification-driven development.
 
-To add it to an existing repository, follow the official
+In each consuming project, follow the official
 [installation guide](https://github.com/github/spec-kit/blob/main/docs/installation.md)
-to install `specify-cli`, then run from the repository root:
+to install `specify-cli`, then run this from the repository root:
 
 ```shell
-specify init --here --integration copilot
+specify init --here --force --integration copilot --integration-options="--skills"
 ```
 
-This official command creates and owns `.specify/` and the Copilot integration
-files. Do not create `.specify/` manually or copy a custom imitation from this
-template. Review and version generated files according to the Spec Kit
-[CLI reference](https://github.github.io/spec-kit/reference/core.html) and
-documentation.
+This template has no pre-populated `.specify/` files. Initializing each
+consuming project ensures generated files match its Spec Kit version, Copilot
+integration mode, and execution environment. In Spec Kit 0.13.2, skills mode
+is the modern Copilot layout; the legacy `.agent.md` plus `.prompt.md` layout
+is deprecated. Generated skills are supported by GitHub Copilot App.
+
+See the [adoption guide](docs/adoption-guide.md#7-add-spec-kit-when-needed) for
+environment-specific commands and generated files to review and version.
 
 ## Automatic discovery and common references
 
