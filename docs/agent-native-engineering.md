@@ -57,44 +57,33 @@ specialist only when its job matches the next step.
 | --- | --- | --- |
 | `AGENTS.md` | Defines the stable operating contract Copilot reads | Engineering policy, risk rules, or evidence expectations differ |
 | `.github/copilot-instructions.md` | Gives Copilot concise repository facts, commands, and important paths | Adopting the template in any real project |
-| `.github/instructions/` | Contains active language or path-specific rules | A catalog instruction is activated or the directory layout changes |
 | `.github/agents/` | Defines active specialist roles and their tool boundaries | A recurring role needs a distinct specialist |
-| `.github/skills/` | Stores active reusable procedures and references | A trusted catalog or external skill is activated |
-| `catalog/` | Stores optional components outside automatic discovery | A component is copied into its matching `.github/` directory |
+| `.github/skills/` | Stores active reusable procedures and references | A trusted external skill is activated |
+| `catalog/` | Stores optional agents outside automatic discovery | A specialist agent is copied into `.github/agents/` |
 | `.github/ISSUE_TEMPLATE/` | Captures outcomes, acceptance criteria, and risk | The team plans work differently |
 | `.github/pull_request_template.md` | Captures validation and residual risk | The review process requires different evidence |
 
 Delete what does not apply. A smaller accurate setup is better than a large
 generic one.
 
-## Activate optional components
+## Add optional agents
 
 The active agents and skills cover normal implementation and architectural
-decisions. Everything under `catalog/` stays inactive until you copy it into a
-location Copilot discovers.
+decisions. The catalog contains three inactive specialists:
 
-| Component | Copy from | Copy to |
-| --- | --- | --- |
-| Custom agent | `catalog/agents/<name>.agent.md` | `.github/agents/<name>.agent.md` |
-| Scoped instruction | `catalog/instructions/<name>.instructions.md` | `.github/instructions/<name>.instructions.md` |
-
-The catalog contains only components with a clear development use:
-
-| Component | Activate it when |
+| Agent | Add it when |
 | --- | --- |
 | `issue-triage` | Incoming issues need consistent reproduction, priority, and readiness |
 | `technical-support` | Maintainers need a read-first diagnosis and a safe recovery path |
 | `documentation-ux` | User or operator journeys need focused documentation work |
-| Python instruction | The repository contains Python files |
-| Cloud-native instruction | The repository contains deployable services or infrastructure |
 
-Before committing, check the component's description, tools, path patterns,
-and references against the real repository. For an external skill, review and
-copy its complete folder into `.github/skills/`.
+Copy the selected file from `catalog/agents/` into `.github/agents/`. Before
+committing it, check its description and tools against the real repository.
+For an external skill, review and copy its complete folder into
+`.github/skills/`.
 
-Most projects need only a few optional components. Activate one when a
-recurring job needs instructions or tools that the active core does not
-provide.
+Most projects need none of these agents. Add one only when that job recurs and
+the active core does not handle it well.
 
 ## Avoid overlapping components
 
