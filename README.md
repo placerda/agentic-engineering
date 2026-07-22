@@ -48,6 +48,8 @@ Use `implementation` when a task is understood and ready for code. Use
 `architecture` when a structural or hard-to-reverse decision must be resolved
 first.
 
+![Overview of the active core and optional specialist agents](docs/images/agent-native-template-overview.png)
+
 ## Optional: add GitHub Spec Kit
 
 [GitHub Spec Kit](https://github.com/github/spec-kit) adds an optional
