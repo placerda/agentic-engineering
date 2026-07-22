@@ -95,7 +95,6 @@ just by existing in the repository.
 |   |-- ISSUE_TEMPLATE/
 |   `-- pull_request_template.md
 `-- docs/
-    |-- adr/
     |-- adoption-guide.md
     |-- agentic-development-model.md
     `-- routing.md

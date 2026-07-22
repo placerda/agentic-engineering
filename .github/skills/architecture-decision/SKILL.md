@@ -12,10 +12,9 @@ description: Conducts and records a verifiable architectural decision. Use when 
    with measures.
 4. Compare at least two viable alternatives and the option of not changing.
 5. State benefits, costs, risks, reversibility, and operational impact.
-6. Record the decision with `docs/adr/template.md`.
+6. Record the decision in the consuming project's designated decision log.
 7. Define fitness functions, adoption, migration, and the review trigger.
 
 Do not turn a tool preference into an architectural requirement. If data is
 missing to decide, record an investigation with a deadline and decision
 criterion.
-
