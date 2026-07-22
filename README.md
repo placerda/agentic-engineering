@@ -12,8 +12,8 @@ and are not discovered automatically. Activate only what the project needs.
 
 1. Create a repository from this template, or copy the template files into an
    existing repository.
-2. Open the repository with GitHub Copilot, select the `implementation` agent,
-   and give it one small, real task:
+2. Open the repository with GitHub Copilot and give the main agent one small,
+   real task:
 
    ```text
    I want to [describe a small, checkable outcome]. Inspect what already
@@ -39,8 +39,9 @@ the model and the optional customization points.
 | Workflow | Issue and pull request templates with evidence and risk prompts |
 | Human guide | One concise guide in `docs/` |
 
-Start with the `implementation` agent for normal development work. Use
-`architecture` only for structural or hard-to-reverse decisions.
+Use `implementation` when a task is understood and ready for code. Use
+`architecture` when a structural or hard-to-reverse decision must be resolved
+first.
 
 ## Optional: add GitHub Spec Kit
 
