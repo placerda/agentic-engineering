@@ -80,8 +80,10 @@ environment-specific scripts. These commands were verified with Spec Kit
 
 ## Sources and licensing
 
-The model draws on established software architecture, implementation, Python,
-cloud-native, and agentic engineering guidance. The bibliography is in
-[`sources.md`](.github/skills/engineering-principles/references/sources.md).
+The principles in this template were informed by established work in software
+architecture, implementation, Python, cloud-native systems, and agentic
+engineering. [`sources.md`](.github/skills/engineering-principles/references/sources.md)
+credits those conceptual references and offers further reading. Referenced
+works are not reproduced in this repository.
 
 This repository is available under the [MIT License](LICENSE).
