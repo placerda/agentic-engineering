@@ -12,16 +12,31 @@ and are not discovered automatically. Activate only what the project needs.
 
 1. Create a repository from this template, or copy the template files into an
    existing repository.
-2. Open the repository in GitHub Copilot App, CLI, or a supported IDE and ask:
+2. Open the repository in GitHub Copilot App, CLI, or a supported IDE. Choose
+   the prompt that matches the project.
+
+   **Existing repository**
 
    ```text
-   Inspect this repository and adapt the agent-native setup to its actual
-   languages, commands, paths, and quality checks. Keep what applies, remove
-   what does not, and do not invent commands. Show me the proposed changes
-   before editing.
+   Inspect the manifests, scripts, CI workflows, source tree, tests, and
+   documentation in this repository. Compare that evidence with AGENTS.md and
+   the files under .github/. Propose only changes supported by what you find,
+   list the commands you verified, and flag anything that still needs a human
+   decision. Do not edit yet.
    ```
 
-3. Review the proposed changes, then start with a small issue that has a clear
+   **New project**
+
+   ```text
+   This is a new project for [describe the product in one sentence]. Before
+   editing, ask me only for decisions that cannot be discovered yet, such as
+   the stack, commands, source layout, deployment target, and quality gates.
+   Then propose the smallest agent-native setup that fits those decisions. Do
+   not edit yet.
+   ```
+
+3. Review the proposal, let Copilot apply the approved changes, then start with
+   a small issue that has a clear
    outcome and acceptance criteria.
 
 That is enough to begin. The

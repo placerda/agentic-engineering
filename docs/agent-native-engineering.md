@@ -27,17 +27,33 @@ work at hand.
 
 ## Use it before you customize it
 
-Create a repository from the template and let Copilot inspect the project:
+Create a repository from the template and choose the path that matches the
+project.
+
+For an existing repository, let Copilot compare the template with evidence:
 
 ```text
-Inspect this repository and adapt the agent-native setup to its actual
-languages, commands, paths, and quality checks. Keep what applies, remove what
-does not, and do not invent commands. Show me the proposed changes before
-editing.
+Inspect the manifests, scripts, CI workflows, source tree, tests, and
+documentation in this repository. Compare that evidence with AGENTS.md and the
+files under .github/. Propose only changes supported by what you find, list the
+commands you verified, and flag anything that still needs a human decision. Do
+not edit yet.
 ```
 
-Review the proposal and keep only verified facts. Copilot should discover real
-commands from the repository and run them before documenting them.
+For a new project, give Copilot the product goal and let it ask for missing
+decisions:
+
+```text
+This is a new project for [describe the product in one sentence]. Before
+editing, ask me only for decisions that cannot be discovered yet, such as the
+stack, commands, source layout, deployment target, and quality gates. Then
+propose the smallest agent-native setup that fits those decisions. Do not edit
+yet.
+```
+
+Review the proposal and keep only verified facts or explicit decisions.
+Copilot should discover real commands from an existing repository and verify
+them before documenting them.
 
 Then give the `implementation` agent a small issue with a clear outcome and
 acceptance criteria. Use `architecture` only for a structural or
