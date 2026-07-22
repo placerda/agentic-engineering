@@ -102,23 +102,14 @@ For example, do not add another general developer agent beside
 replacing a component, remove stale references and confirm which one Copilot
 loads.
 
-## Match planning to risk
+## Plan according to the change
 
-Planning depth should follow the cost of being wrong.
+For small, reversible work, state the expected result, make the change, and run
+the relevant checks.
 
-For a local, reversible change, keep it light:
-
-1. Define the problem, outcome, and acceptance criteria.
-2. Implement the smallest coherent change.
-3. Run the most relevant checks.
-4. Record the evidence.
-
-For a broad or hard-to-reverse change, resolve the relevant contracts, data,
-security, migration, recovery, and operational questions before coding. Use
-the `architecture` agent and `architecture-decision` skill when the decision
-needs explicit alternatives, consequences, and fitness functions.
-
-Planning should remove expensive ambiguity, not create paperwork.
+Before a change that is difficult to undo, use the `architecture` agent to
+compare options. Use the `architecture-decision` skill only when the decision
+needs a permanent record.
 
 ## Add Spec Kit only when useful
 
