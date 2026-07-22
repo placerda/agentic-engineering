@@ -1,7 +1,7 @@
 # Agent-Native Engineering
 
-A practical GitHub Copilot starter template for repositories where agents do
-real engineering work, not just autocomplete.
+A practical GitHub Copilot template for repositories where agents do real work,
+not just autocomplete.
 
 The template is ready to use with a deliberately small active core. It includes
 two custom agents, foundational skills, and issue and pull request templates.
