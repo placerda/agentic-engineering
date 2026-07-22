@@ -5,8 +5,8 @@ real engineering work, not just autocomplete.
 
 The template is ready to use with a deliberately small active core. It includes
 two custom agents, foundational skills, and issue and pull request templates.
-Additional agents and stack-specific instructions live in `catalog/` and are
-not discovered automatically. Activate only what the project needs.
+Optional specialist agents live in `catalog/` and are not discovered
+automatically.
 
 ## Start here
 
@@ -40,7 +40,7 @@ the model and the optional customization points.
 | Core behavior | [`AGENTS.md`](AGENTS.md) and [Copilot instructions](.github/copilot-instructions.md) |
 | Active agents | [`implementation`](.github/agents/implementation.agent.md) and [`architecture`](.github/agents/architecture.agent.md) |
 | Active skills | [Engineering principles](.github/skills/engineering-principles/SKILL.md) and [architecture decisions](.github/skills/architecture-decision/SKILL.md) |
-| Optional catalog | [Agents](catalog/agents/) for triage, support, and documentation; [instructions](catalog/instructions/) for Python and cloud-native files |
+| Optional catalog | [Specialist agents](catalog/) for triage, support, and documentation |
 | Workflow | [Issue templates](.github/ISSUE_TEMPLATE/) and the [pull request template](.github/pull_request_template.md) |
 | Human guide | The [Agent-Native Engineering guide](docs/agent-native-engineering.md) |
 
