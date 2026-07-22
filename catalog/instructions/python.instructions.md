@@ -24,5 +24,5 @@ applyTo: "**/*.py,**/*.pyi"
   repository's commands. Do not introduce new tools just to satisfy this
   rule.
 
-For detailed guidance, load the `python-development` skill.
-
+For deeper guidance, read
+`.github/skills/engineering-principles/references/python-pep-guidance.md`.
