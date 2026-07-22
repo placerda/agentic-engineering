@@ -13,8 +13,7 @@ cost, data, security, evolution, and reversibility.
 
 Prefer logical independence before physical distribution and the smallest
 degree of distribution that satisfies the prioritized characteristics. Record
-significant decisions in `docs/adr/`.
+significant decisions in the consuming project's designated decision log.
 
 Output handoff to `implementation`: decision, contracts, boundaries, fitness
 functions, risks, migration, and open questions.
-

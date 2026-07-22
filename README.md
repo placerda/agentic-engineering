@@ -31,7 +31,6 @@ The repository uses progressive disclosure:
 | `.github/agents/` | Functional agents and their boundaries |
 | `.github/skills/` | Indexes and procedures loaded on demand |
 | `docs/` | Full guide, adoption, and routing |
-| `docs/adr/` | Architectural decisions of the consuming project |
 
 ## Adopting this in another repository
 
