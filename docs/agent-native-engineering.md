@@ -27,8 +27,8 @@ work at hand.
 
 ## Use it before you customize it
 
-Create a repository from the template, select the `implementation` agent, and
-give it one small, real task:
+Create a repository from the template and give the main Copilot agent one
+small, real task:
 
 ```text
 I want to [describe a small, checkable outcome]. Inspect what already exists,
@@ -41,8 +41,9 @@ conventions from the files. In a new project, it asks for the decisions needed
 to complete the task. The first interaction stays focused on useful work
 instead of auditing the template.
 
-Use `architecture` instead only when the first task requires a structural or
-hard-to-reverse decision.
+Use `implementation` when the task is understood and ready for code. Use
+`architecture` when a structural or hard-to-reverse decision must be resolved
+first.
 
 ## What you can customize
 
