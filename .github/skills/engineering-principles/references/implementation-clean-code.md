@@ -17,7 +17,7 @@ change.
 
 ## Design
 
-- Remove duplication of knowledge, not just similar-looking text.
+- Remove duplicated knowledge, not just similar-looking text.
 - Encapsulate invariants near the data and behavior that maintain them.
 - Do not add parameters, flags, or abstractions for hypothetical
   scenarios.
@@ -41,3 +41,17 @@ change.
 - Delete dead code instead of commenting out old versions.
 - Use the formatter, linter, static analysis, and tests configured by the
   project.
+
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- Martin, Robert C.
+  [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://www.oreilly.com/library/view/clean-code-a/9780136083238/).
+  Prentice Hall, 2008.
+- Hunt, Andrew; Thomas, David.
+  [*The Pragmatic Programmer*](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/).
+  20th Anniversary ed. Addison-Wesley, 2019.
+- Fowler, Martin.
+  [*Refactoring: Improving the Design of Existing Code*](https://martinfowler.com/books/refactoring.html).
+  2nd ed. Addison-Wesley, 2018.

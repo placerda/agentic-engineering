@@ -17,9 +17,7 @@ Load only the references you need:
 | Code clarity and maintainability | `references/implementation-clean-code.md` |
 | Python development | `references/python-pep-guidance.md` |
 | Deployable services | `references/cloud-native-twelve-factor.md` |
-| Origin and attribution | `references/sources.md` |
 
 Use principles as design questions, not dogma. Record context, alternatives,
 consequences, and evidence. The repository's configuration and the task's
 requirements remain the executable source of truth.
-

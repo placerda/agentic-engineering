@@ -40,3 +40,19 @@
 4. Is the dependency oriented toward the most stable part?
 5. What evidence shows the decision works under the real constraints?
 
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- Martin, Robert C. [*Clean Architecture: A Craftsman's Guide to Software
+  Structure and Design*](https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/).
+  Pearson Education, 2017.
+- Richards, Mark; Ford, Neal.
+  [*Fundamentals of Software Architecture*](https://fundamentalsofsoftwarearchitecture.com/).
+  O'Reilly Media.
+- Fowler, Martin.
+  ["Who Needs an Architect?"](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf).
+  *IEEE Software*, 2003.
+- Poppendieck, Mary; Poppendieck, Tom.
+  [*Lean Software Development: An Agile Toolkit*](https://www.oreilly.com/library/view/lean-software-development/0321150783/).
+  Addison-Wesley, 2003.

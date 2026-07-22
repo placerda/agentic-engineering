@@ -66,10 +66,10 @@ explains when to use it, how to install it, and what to commit.
 
 ## Sources and licensing
 
-The principles in this template were informed by established work in software
-architecture, implementation, Python, cloud-native systems, and agentic
-engineering. [`sources.md`](.github/skills/engineering-principles/references/sources.md)
-credits those conceptual references and offers further reading. Referenced
-works are not reproduced in this repository.
+Each file under
+[`engineering-principles/references`](.github/skills/engineering-principles/references/)
+ends with the books, standards, and articles that informed its principles.
+The guidance is original, project-focused synthesis. Referenced works are not
+reproduced in this repository.
 
 This repository is available under the [MIT License](LICENSE).

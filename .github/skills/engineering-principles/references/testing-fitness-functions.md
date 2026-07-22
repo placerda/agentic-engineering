@@ -41,3 +41,18 @@ Record command, scope, result, and limitations. Coverage is a signal, not
 proof of quality. A task is incomplete if the expected result cannot be
 verified.
 
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- Ford, Neal; Parsons, Rebecca; Kua, Patrick; Sadalage, Pramod.
+  [*Building Evolutionary Architectures*](https://evolutionaryarchitecture.com/).
+  2nd ed. O'Reilly Media, 2022.
+- Fowler, Martin.
+  ["The Practical Test Pyramid"](https://martinfowler.com/articles/practical-test-pyramid.html).
+  2018.
+- Fowler, Martin.
+  ["Contract Test"](https://martinfowler.com/bliki/ContractTest.html).
+- Humble, Jez; Farley, David.
+  [*Continuous Delivery*](https://www.oreilly.com/library/view/continuous-delivery-reliable/9780321670250/).
+  Addison-Wesley, 2010.

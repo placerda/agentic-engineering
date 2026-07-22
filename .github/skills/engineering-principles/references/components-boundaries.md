@@ -40,3 +40,20 @@
 - Reassess granularity when components change together, require frequent
   coordination, or cannot be operated independently.
 
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- Martin, Robert C. [*Clean Architecture: A Craftsman's Guide to Software
+  Structure and Design*](https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/).
+  Pearson Education, 2017. See the component cohesion and dependency principles.
+- Richards, Mark; Ford, Neal.
+  [*Fundamentals of Software Architecture*](https://fundamentalsofsoftwarearchitecture.com/).
+  O'Reilly Media. See the material on modularity, component-based thinking,
+  coupling, and connascence.
+- Skelton, Matthew; Pais, Manuel.
+  [*Team Topologies*](https://teamtopologies.com/book).
+  IT Revolution, 2019.
+- Conway, Melvin.
+  ["How Do Committees Invent?"](https://www.melconway.com/Home/Committees_Paper.html).
+  *Datamation*, 1968.

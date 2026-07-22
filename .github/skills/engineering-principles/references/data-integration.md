@@ -39,3 +39,19 @@
 Test contracts, compatibility, idempotency, partial failures, recovery, and
 correlation telemetry. A happy-path diagram does not prove safe operation.
 
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- Newman, Sam.
+  [*Building Microservices*](https://www.oreilly.com/library/view/building-microservices-2nd/9781492034018/).
+  2nd ed. O'Reilly Media, 2021.
+- Nygard, Michael T.
+  [*Release It!*](https://pragprog.com/titles/mnee2/release-it-second-edition/).
+  2nd ed. Pragmatic Bookshelf, 2018.
+- Hohpe, Gregor; Woolf, Bobby.
+  [*Enterprise Integration Patterns*](https://www.enterpriseintegrationpatterns.com/).
+  Addison-Wesley, 2003.
+- Richardson, Chris.
+  [*Microservices Patterns*](https://www.manning.com/books/microservices-patterns).
+  Manning, 2018.

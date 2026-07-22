@@ -46,3 +46,11 @@ Run, as configured in the project:
 3. The static type checker.
 4. Specific tests, then the required broader suite.
 
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- [PEP 8, Style Guide for Python Code](https://peps.python.org/pep-0008/).
+- [PEP 20, The Zen of Python](https://peps.python.org/pep-0020/).
+- [PEP 257, Docstring Conventions](https://peps.python.org/pep-0257/).
+- [Ruff documentation](https://docs.astral.sh/ruff/).

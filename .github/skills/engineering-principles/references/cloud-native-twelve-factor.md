@@ -32,6 +32,9 @@ it on every library, local tool, or script.
 
 ## Current complements
 
+These practices extend the original Twelve-Factor methodology with current
+cloud-native operational and security guidance.
+
 - Define health checks that represent real capacity to serve traffic.
 - Use least privilege, small images, verified dependencies, and workload
   identity.
@@ -40,3 +43,15 @@ it on every library, local tool, or script.
 - Validate rollback or roll-forward, migration, and cross-version
   compatibility.
 
+## Conceptual references and further reading
+
+The wording above is original, project-focused synthesis informed by:
+
+- [The Twelve-Factor App](https://12factor.net/).
+- Majors, Charity; Fong-Jones, Liz; Miranda, George.
+  [*Observability Engineering*](https://www.oreilly.com/library/view/observability-engineering/9781492076438/).
+  O'Reilly Media, 2022.
+- Kubernetes documentation.
+  ["Configure Liveness, Readiness and Startup Probes"](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
+- Cloud Native Computing Foundation.
+  ["Software Supply Chain Security Best Practices"](https://www.cncf.io/reports/software-supply-chain-security-best-practices/).
