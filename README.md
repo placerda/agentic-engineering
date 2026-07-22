@@ -56,7 +56,7 @@ first.
 <p align="center">
   <img src="docs/images/agent-native-template-overview.png"
        alt="Overview of the active core and optional specialist agents"
-       width="500">
+       width="620">
 </p>
 
 ## Optional: add GitHub Spec Kit
