@@ -10,6 +10,11 @@ automatically.
 
 ## Start here
 
+First, install GitHub Copilot in the
+[App](https://github.com/features/ai/github-app),
+[CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli),
+or a [supported IDE](https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-extension).
+
 1. Create a repository from this template, or copy the template files into an
    existing repository.
 2. Open the repository with GitHub Copilot and give the main agent one small,
@@ -48,7 +53,11 @@ Use `implementation` when a task is understood and ready for code. Use
 `architecture` when a structural or hard-to-reverse decision must be resolved
 first.
 
-![Overview of the active core and optional specialist agents](docs/images/agent-native-template-overview.png)
+<p align="center">
+  <img src="docs/images/agent-native-template-overview.png"
+       alt="Overview of the active core and optional specialist agents"
+       width="720">
+</p>
 
 ## Optional: add GitHub Spec Kit
 
