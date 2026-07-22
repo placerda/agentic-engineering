@@ -1,9 +1,7 @@
 # Catalog
 
-Optional specialist agents. Copy one into `.github/agents/` to activate it.
-See the
-[Agent-Native Engineering guide](../docs/agent-native-engineering.md) for
-activation and overlap guidance.
+Copy a specialist into `.github/agents/` to activate it. See the
+[quickstart](../docs/agent-native-engineering.md) for details.
 
 | Agent | Purpose |
 | --- | --- |
