@@ -88,8 +88,9 @@ provide.
 
 ## Avoid overlapping components
 
-Keep one active component for each job. When you add something from the
-catalog, another repository, or a plugin:
+Keep one active component for each job.
+
+When you add something from the catalog, another repository, or a plugin:
 
 - **Same job:** replace the existing component or merge the useful rules into
   it. Do not keep both.
