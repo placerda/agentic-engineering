@@ -72,17 +72,16 @@ Review any external skill before installing it. Skills can contain
 malicious scripts and instructions. Do not pre-approve shell in
 `allowed-tools` without trust and need.
 
-## 6. Configure issue and specification templates
+## 6. Configure issue templates and planning
 
-Adapt the issue templates to the real process. Apply the Spec Kit rule from
-the constitution:
+Adapt the issue templates and planning expectations to the real process:
 
 - a direct issue for a local, reversible change;
-- a specification for high risk or multiple structural conditions.
+- explicit decisions about contracts, data, security, migration, and recovery
+  for broad or high-risk work.
 
-Avoid requiring an extensive specification for simple fixes. Also avoid
-using a vague issue for data migration, security change, or an
-incompatible contract.
+Avoid requiring extensive planning for simple fixes. Also avoid using a vague
+issue for data migration, security change, or an incompatible contract.
 
 ## 7. Integrate quality
 
@@ -121,9 +120,8 @@ Adjust the model based on these signals, not on the volume of files.
 - [ ] Scoped instructions have specific globs.
 - [ ] Each agent has a use case, non-use case, tools, and output.
 - [ ] Skills have one canonical source per rule.
-- [ ] The Spec Kit rule was adapted to the product's risk.
+- [ ] Planning depth reflects the product's risk.
 - [ ] Templates reflect the team's process.
 - [ ] CI runs important objective rules.
 - [ ] Links, names, and paths have been verified.
 - [ ] An owner and periodic review have been defined.
-

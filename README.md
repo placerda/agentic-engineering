@@ -12,16 +12,13 @@ The repository uses progressive disclosure:
 5. Documentation in `docs/` serves people and can be opened when a skill or
    instruction points to it. It is not automatic context.
 
-Spec Kit, in `.specify/`, is triggered by an objective rule for high-risk
-changes. It is a workflow, not a context layer.
-
 ## Quick start
 
 1. Read [`AGENTS.md`](AGENTS.md) to learn the operating contract.
 2. Choose the agent from the table in [`docs/routing.md`](docs/routing.md).
 3. For a simple change, work from an issue with acceptance criteria.
-4. For a broad or high-risk change, follow
-   [`.specify/README.md`](.specify/README.md).
+4. For a broad or high-risk change, resolve contract, data, security,
+   migration, and recovery decisions before implementation.
 5. Before concluding, produce reproducible evidence that the expected
    behavior works.
 
@@ -33,7 +30,6 @@ changes. It is a workflow, not a context layer.
 | `.github/instructions/` | Path-activated rules |
 | `.github/agents/` | Functional agents and their boundaries |
 | `.github/skills/` | Indexes and procedures loaded on demand |
-| `.specify/` | Constitution and minimal specification flow |
 | `docs/` | Full guide, adoption, and routing |
 | `docs/adr/` | Architectural decisions of the consuming project |
 

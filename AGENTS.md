@@ -56,9 +56,9 @@ contracts, data, integration, architectural characteristics, or operation. Use
 the `architecture-decision` skill when the decision is significant, hard to
 reverse, or affects more than one component.
 
-Use the Spec Kit flow when the objective rule in
-`.specify/memory/constitution.md` is triggered. Otherwise, a clear issue with
-acceptance criteria is enough.
+Use a clear issue with acceptance criteria for local, reversible work. Before
+broad or high-risk work, resolve decisions that affect contracts, data,
+security, migration, or recovery.
 
 ## Collaboration
 
@@ -70,4 +70,3 @@ acceptance criteria is enough.
   opportunistic refactoring.
 - Update documentation when behavior, configuration, deployment, operation,
   or user experience changes.
-
