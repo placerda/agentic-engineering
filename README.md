@@ -30,8 +30,8 @@ or a [supported IDE](https://docs.github.com/en/copilot/how-tos/set-up/install-c
 3. Approve the plan, let Copilot implement it, and review the evidence.
 
 That is enough to begin. The
-[`Agent-Native Engineering guide`](docs/agent-native-engineering.md) explains
-the model and the optional customization points.
+[engineering guide](docs/agent-native-engineering.md) explains the model and
+where to customize it.
 
 > Active components load from their standard repository locations.
 > `catalog/` files stay inactive until copied. Availability varies across
