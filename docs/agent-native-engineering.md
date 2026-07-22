@@ -27,8 +27,7 @@ work at hand.
 
 ## Use it before you customize it
 
-Create a repository from the template and give the main Copilot agent one
-small, real task:
+Create a repository from the template and test it with one small, real task:
 
 ```text
 I want to [describe a small, checkable outcome]. Inspect what already exists,
@@ -116,6 +115,9 @@ needs a permanent record.
 Spec Kit is recommended when requirements are unclear, several components must
 move together, or technical decisions should be reviewed before coding. Skip
 it for small, well-understood fixes.
+
+For the complete workflow and command reference, see the
+[official Spec Kit guide](https://github.com/github/spec-kit).
 
 Install `specify-cli`, run the matching command from the repository root, and
 commit the generated files:
