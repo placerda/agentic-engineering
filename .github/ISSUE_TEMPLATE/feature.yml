@@ -35,7 +35,7 @@ body:
   - type: checkboxes
     id: risk
     attributes:
-      label: Specification triggers
+      label: Risk considerations
       options:
         - label: Affects security, privacy, or a trust boundary
         - label: Migrates data with risk of loss or unavailability
@@ -47,4 +47,3 @@ body:
     attributes:
       label: Completion evidence
       description: How will we know the change works?
-

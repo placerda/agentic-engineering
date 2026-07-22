@@ -94,9 +94,6 @@ just by existing in the repository.
 |   |-- skills/
 |   |-- ISSUE_TEMPLATE/
 |   `-- pull_request_template.md
-|-- .specify/
-|   |-- memory/constitution.md
-|   `-- templates/
 `-- docs/
     |-- adr/
     |-- adoption-guide.md
@@ -162,9 +159,9 @@ See the official links in
 
 Seven profiles are available as a catalog, not as a mandatory team.
 
-## Lightweight flow and Spec Kit
+## Planning and delivery
 
-### Lightweight issue flow
+### Local issue flow
 
 Use when the change is local, reversible, and does not alter a persisted
 or public contract:
@@ -175,12 +172,12 @@ or public contract:
 4. specific validation;
 5. a pull request with evidence.
 
-### Spec Kit flow
+### High-risk planning
 
-Use when the constitution detects high risk or multiple structural
-conditions:
+Use when work is broad, difficult to reverse, or affects security, data,
+public contracts, or multiple components:
 
-1. specification of behavior and constraints;
+1. explicit behavior, constraints, and acceptance criteria;
 2. resolution of questions that change contract, data, or security;
 3. technical plan, migration, and recovery;
 4. an ADR for significant decisions;
@@ -261,7 +258,7 @@ a deadline, and a reason.
 
 ### Architecture change
 
-1. The orchestrator applies the Spec Kit rule.
+1. The orchestrator identifies risks and the required planning depth.
 2. `architecture` prioritizes characteristics and compares alternatives.
 3. An ADR records the decision and fitness functions.
 4. `implementation` delivers in compatible stages.
@@ -346,7 +343,7 @@ proxy for value.
 | All agents with all tools | Apply least privilege |
 | Broad globs | Bind instructions to real paths |
 | Rule repeated in multiple places | Elect a canonical source and reference it |
-| Spec Kit for any small tweak | Apply the constitution's objective rule |
+| Heavyweight planning for any small tweak | Match planning depth to risk |
 | ADR without alternatives or verification | Record trade-off and fitness function |
 | Distributed service by default | Start with the smallest distribution |
 | Test coupled to implementation | Protect behavior and contract |
@@ -355,7 +352,7 @@ proxy for value.
 ## Operational checklist
 
 - [ ] The problem, user, and outcome are clear.
-- [ ] The Spec Kit rule was applied.
+- [ ] Planning depth matches the change's risk.
 - [ ] The selected agent is the smallest one capable of completing it.
 - [ ] Relevant instructions and skills were loaded.
 - [ ] Tools and permissions are minimal.
@@ -365,4 +362,3 @@ proxy for value.
 - [ ] Migration, recovery, and operation were considered.
 - [ ] Affected documentation was updated.
 - [ ] Reproducible evidence accompanies the conclusion.
-

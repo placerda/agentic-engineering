@@ -12,7 +12,7 @@ Avoid duplicating investigation across agents.
 
 ## Flow
 
-1. Confirm outcome, acceptance criteria, risks, and the Spec Kit rule.
+1. Confirm outcome, acceptance criteria, risks, and required planning depth.
 2. Define a single source of truth for requirements and decisions.
 3. Delegate architecture before implementation when there is a structural
    decision.
@@ -27,4 +27,3 @@ GitHub.com. On compatible surfaces, the user can chain agents manually.
 
 Exit condition: every criterion has an owner, evidence, or an explicit
 blocker.
-
