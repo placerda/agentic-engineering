@@ -23,6 +23,5 @@ library or script.
 - Emit structured logs as an event stream for external collection.
 - Run administrative tasks as versioned, auditable processes.
 
-Load the `cloud-native-service` skill for service, deployment, or operation
-decisions.
-
+For deeper guidance, read
+`.github/skills/engineering-principles/references/cloud-native-twelve-factor.md`.
