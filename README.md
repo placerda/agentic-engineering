@@ -12,36 +12,21 @@ and are not discovered automatically. Activate only what the project needs.
 
 1. Create a repository from this template, or copy the template files into an
    existing repository.
-2. Open the repository in GitHub Copilot App, CLI, or a supported IDE. Choose
-   the prompt that matches the project.
-
-   **Existing repository**
+2. Open the repository with GitHub Copilot, select the `implementation` agent,
+   and give it one small, real task:
 
    ```text
-   Inspect the manifests, scripts, CI workflows, source tree, tests, and
-   documentation in this repository. Compare that evidence with AGENTS.md and
-   the files under .github/. Propose only changes supported by what you find,
-   list the commands you verified, and flag anything that still needs a human
-   decision. Do not edit yet.
+   I want to [describe a small, checkable outcome]. Inspect what already
+   exists, propose the smallest plan, and tell me how you will verify it. Ask
+   me only for decisions the repository cannot answer. Wait for my approval
+   before editing.
    ```
 
-   **New project**
-
-   ```text
-   This is a new project for [describe the product in one sentence]. Before
-   editing, ask me only for decisions that cannot be discovered yet, such as
-   the stack, commands, source layout, deployment target, and quality gates.
-   Then propose the smallest agent-native setup that fits those decisions. Do
-   not edit yet.
-   ```
-
-3. Review the proposal, let Copilot apply the approved changes, then start with
-   a small issue that has a clear
-   outcome and acceptance criteria.
+3. Approve the plan, let Copilot implement it, and review the evidence.
 
 That is enough to begin. The
 [`Agent-Native Engineering guide`](docs/agent-native-engineering.md) explains
-the model and every customization point.
+the model and the optional customization points.
 
 ## What you get
 
@@ -56,31 +41,6 @@ the model and every customization point.
 
 Start with the `implementation` agent for normal development work. Use
 `architecture` only for structural or hard-to-reverse decisions.
-
-## Customize only what you need
-
-- Replace generic project facts and commands with verified ones.
-- Copy stack-specific instructions or skills from `catalog/` only when they
-  match the project.
-- Add another agent only for a recurring, well-defined role.
-- Adapt issue and pull request templates to the team's real process.
-- Review external skills before placing them in `.github/skills/`.
-
-The guide maps each file to its purpose and explains when to change it.
-
-## Avoid overlapping agents and skills
-
-Keep one active component for each capability. Before adding an agent or skill
-from another repository or plugin, compare its job with what is already active:
-
-- replace an equivalent component;
-- merge the useful rules into the existing component; or
-- skip it.
-
-Do not keep two implementation agents, two architecture agents, or competing
-planning skills active by default. Spec Kit's `speckit-*` skills can coexist
-with this core because they provide a named specification workflow rather than
-another general implementation agent.
 
 ## Optional: add GitHub Spec Kit
 
