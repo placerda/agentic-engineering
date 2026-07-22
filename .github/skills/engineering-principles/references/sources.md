@@ -1,4 +1,8 @@
-# Sources and bibliography
+# Conceptual references and further reading
+
+The works below informed principles and terminology used in this repository.
+The guidance is original, project-focused writing. These citations provide
+attribution and further reading; the referenced works are not reproduced here.
 
 ## Software architecture
 
