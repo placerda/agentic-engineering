@@ -30,7 +30,7 @@ or a [supported IDE](https://docs.github.com/en/copilot/how-tos/set-up/install-c
 3. Approve the plan, let Copilot implement it, and review the evidence.
 
 That is enough to begin. The
-[engineering guide](docs/agent-native-engineering.md) explains the model and
+[quickstart](docs/agent-native-engineering.md) explains the model and
 where to customize it.
 
 > Active components load from their standard repository locations.
@@ -47,7 +47,7 @@ where to customize it.
 | Active skills | [Engineering principles](.github/skills/engineering-principles/SKILL.md) and [architecture decisions](.github/skills/architecture-decision/SKILL.md) |
 | Optional catalog | [Specialist agents](catalog/) for triage, support, and documentation |
 | Workflow | [Issue templates](.github/ISSUE_TEMPLATE/) and the [pull request template](.github/pull_request_template.md) |
-| Human guide | The [Agent-Native Engineering guide](docs/agent-native-engineering.md) |
+| Quickstart | [Agent-Native Engineering Quickstart](docs/agent-native-engineering.md) |
 
 Use `implementation` when a task is understood and ready for code. Use
 `architecture` when a structural or hard-to-reverse decision must be resolved
@@ -61,33 +61,10 @@ first.
 
 ## Optional: add GitHub Spec Kit
 
-[GitHub Spec Kit](https://github.com/github/spec-kit) adds an optional
-specification workflow generated for each project.
-
-1. Install `specify-cli` using the official
-   [installation guide](https://github.com/github/spec-kit/blob/main/docs/installation.md).
-2. From the repository root, run the command for the environment:
-
-   **Windows with PowerShell**
-
-   ```powershell
-   specify init --here --force --integration copilot `
-     --integration-options="--skills" --script ps
-   ```
-
-   **Linux or cloud**
-
-   ```shell
-   specify init --here --force --integration copilot \
-     --integration-options="--skills" --script sh
-   ```
-
-3. Review and commit the generated `.github/skills/speckit-*` and `.specify/`
-   files.
-
-The template does not pre-populate those files because Spec Kit generates
-environment-specific scripts. These commands were verified with Spec Kit
-0.13.2 and the generated skills were discovered by GitHub Copilot App.
+The template works without Spec Kit. Add it when requirements are unclear or
+several components must change together. The
+[Spec Kit setup](docs/agent-native-engineering.md#add-spec-kit-only-when-useful)
+explains when to use it, how to install it, and what to commit.
 
 ## Sources and licensing
 
