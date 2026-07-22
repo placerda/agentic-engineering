@@ -5,8 +5,8 @@ real engineering work, not just autocomplete.
 
 The template is ready to use with a deliberately small active core. It includes
 two custom agents, foundational skills, and issue and pull request templates.
-Additional agents, skills, and stack-specific instructions live in `catalog/`
-and are not discovered automatically. Activate only what the project needs.
+Additional agents and stack-specific instructions live in `catalog/` and are
+not discovered automatically. Activate only what the project needs.
 
 ## Start here
 
@@ -32,12 +32,12 @@ the model and the optional customization points.
 
 | Area | Included |
 | --- | --- |
-| Core behavior | `AGENTS.md` and `.github/copilot-instructions.md` |
-| Active agents | `implementation` and `architecture` |
-| Active skills | Engineering principles and architecture decisions |
-| Optional catalog | Triage, support, documentation, orchestration, communications, Python, and cloud-native components |
-| Workflow | Issue and pull request templates with evidence and risk prompts |
-| Human guide | One concise guide in `docs/` |
+| Core behavior | [`AGENTS.md`](AGENTS.md) and [Copilot instructions](.github/copilot-instructions.md) |
+| Active agents | [`implementation`](.github/agents/implementation.agent.md) and [`architecture`](.github/agents/architecture.agent.md) |
+| Active skills | [Engineering principles](.github/skills/engineering-principles/SKILL.md) and [architecture decisions](.github/skills/architecture-decision/SKILL.md) |
+| Optional catalog | [Agents](catalog/agents/) for triage, support, and documentation; [instructions](catalog/instructions/) for Python and cloud-native files |
+| Workflow | [Issue templates](.github/ISSUE_TEMPLATE/) and the [pull request template](.github/pull_request_template.md) |
+| Human guide | The [Agent-Native Engineering guide](docs/agent-native-engineering.md) |
 
 Use `implementation` when a task is understood and ready for code. Use
 `architecture` when a structural or hard-to-reverse decision must be resolved
