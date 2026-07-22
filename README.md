@@ -41,6 +41,26 @@ unused agents, and enable only the instructions compatible with the present
 technology. The full roadmap is in
 [`docs/adoption-guide.md`](docs/adoption-guide.md).
 
+## Optional: GitHub Spec Kit
+
+[GitHub Spec Kit](https://github.com/github/spec-kit) is a separate official
+open-source GitHub project. It is not built into GitHub Copilot and is not
+preinstalled by this template.
+
+To add it to an existing repository, follow the official
+[installation guide](https://github.com/github/spec-kit/blob/main/docs/installation.md)
+to install `specify-cli`, then run from the repository root:
+
+```shell
+specify init --here --integration copilot
+```
+
+This official command creates and owns `.specify/` and the Copilot integration
+files. Do not create `.specify/` manually or copy a custom imitation from this
+template. Review and version generated files according to the Spec Kit
+[CLI reference](https://github.github.io/spec-kit/reference/core.html) and
+documentation.
+
 ## Automatic discovery and common references
 
 GitHub Copilot recognizes files in specific locations and formats. Files such
